@@ -1,0 +1,18 @@
+# The URL the site will be built for
+base_url = "https://knzconnor.github.io/"
+title = "Kenzi Connor"
+description = "Engineering manager ; software engineer + technical consultant ; business executive + operations"
+compile_sass = true
+build_search_index = true
+
+[markdown]
+highlight_code = true
+
+[extra]
+color_theme = "theme-base-08"
+sidebar_reverse = true
+sidebar_links = [
+    {url = "https://github.com/knzconnor", name = "GitHub"},
+    {url = "https://www.linkedin.com/in/knzconnor/", name = "LinkedIn"},
+]
+sidebar_sticky = true

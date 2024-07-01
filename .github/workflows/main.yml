@@ -1,0 +1,17 @@
+name: Build Zola and push to gh-pages
+
+on: 
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout main
+      uses: actions/checkout@v4
+    - name: Build and push
+      uses: shalzz/zola-deploy-action@v0.19.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
