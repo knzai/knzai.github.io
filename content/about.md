@@ -1,5 +1,6 @@
 +++
 title = "About"
+class = "embed"
 +++
 
 tests

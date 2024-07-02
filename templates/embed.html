@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="post">
+  <div {% if class %}class="{{class}}"{% endif %}>
+      <iframe src="{{page.extra.url | safe}}" />
+      <!-- more -->
+  </div>
+  {{ page.content | safe }}
+</div>
+{% endblock content %}
