@@ -1,11 +1,7 @@
 {% extends "index.html" %}
-
 {% block content %}
 <div class="post">
-  <div {% if class %}class="{{class}}"{% endif %}>
-      <iframe src="{{page.extra.url | safe}}" />
-      <!-- more -->
-  </div>
-  {{ page.content | safe }}
+  {% set noscript = load_data(url=page.extra.url) | regex_replace(pattern=`<head[\s\S]+?<\/head>`, rep=` `) | regex_replace(pattern=`<script[\s\S]+?<\/script>`, rep=` `) | replace(from="<!DOCTYPE html>", to="") %}
+  {{ noscript | safe }}
 </div>
 {% endblock content %}
