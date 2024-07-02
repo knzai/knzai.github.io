@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://knzconnor.github.io/"
 title = "Kenzi Connor"
-description = "Engineering manager ; software engineer + technical consultant ; business executive + operations"
+description = "Staff software engineer - VP Engineering - Director of Engineering - CEO & CTO"
 compile_sass = true
 build_search_index = true
 
