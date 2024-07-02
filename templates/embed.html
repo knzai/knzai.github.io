@@ -1,7 +1,9 @@
 {% extends "index.html" %}
 {% block content %}
 <div class="post embed">
-  {% set noscript = load_data(url=page.extra.url) | regex_replace(pattern=`<head[\s\S]+?<\/head>`, rep=` `) | regex_replace(pattern=`<script[\s\S]+?<\/script>`, rep=` `) | replace(from="<!DOCTYPE html>", to="") %}
-  {{ noscript | safe }}
+  {% set parsed = load_data(url=page.extra.url) | regex_replace(pattern=`<head[\s\S]+?<\/head>`, rep=` `) | regex_replace(pattern=`<script[\s\S]+?<\/script>`, rep=` `) | replace(from="<!DOCTYPE html>", to="") | regex_replace(pattern=`(?<close>\})`, rep=`$close
+`) | regex_replace(pattern=`\n(?<open>h[1-6]\{)`, rep=`
+.embed $open`) %}
+  {{ parsed | safe}}
 </div>
 {% endblock content %}
