@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://knzconnor.github.io/"
+base_url = "https://knz.ai"
 title = "Kenzi Connor"
 description = "Staff software engineer - VP Engineering - Director of Engineering - CEO & CTO"
 compile_sass = true
