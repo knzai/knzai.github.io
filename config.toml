@@ -12,7 +12,8 @@ highlight_code = true
 color_theme = "theme-base-08"
 sidebar_reverse = true
 sidebar_links = [
-    {url = "https://github.com/knzconnor", name = "GitHub"},
-    {url = "https://www.linkedin.com/in/knzconnor/", name = "LinkedIn"},
+    {url = "https://github.com/knzai", name = "GitHub"},
+    {url = "https://www.linkedin.com/in/knzai/", name = "LinkedIn"},
+    {url = "mailto:site@knz.ai", name = "site@knz.ai"},
 ]
 sidebar_sticky = true
