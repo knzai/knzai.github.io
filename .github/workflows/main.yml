@@ -1,15 +1,10 @@
-name: Build Zola and push to gh-pages
-
 on: 
   push:
     branches:
-      - main
-      
+      - main     
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v4
-    - name: Build and push
-      uses: actions/zola-cli
+    - uses: actions/checkout@v4
+    - uses: actions/zola-cli@v1
