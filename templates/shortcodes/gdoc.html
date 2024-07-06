@@ -1,0 +1,10 @@
+{{ load_data(url=url) | 
+regex_replace(pattern=`<head[\s\S]+?<\/head>`, rep=` `) | 
+regex_replace(pattern=`<script[\s\S]+?<\/script>`, rep=` `) | 
+replace(from="<!DOCTYPE html>", to="") | 
+regex_replace(pattern=`ul\.[^}]+}`, rep=``) | 
+regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) | 
+regex_replace(pattern=`(?<close>\})`, rep=`$close
+.embed `) | 
+regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
+$open`) | safe }}
