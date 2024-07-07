@@ -301,9 +301,12 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 1em;
 }
 
+.post .continue-reading {
+  text-align: center;
+}
 /* Blog post or page title */
 .page-title,
 .post-title,
