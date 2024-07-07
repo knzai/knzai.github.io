@@ -1,0 +1,20 @@
+{% block breadcrumb %}
+<h4 class="breadcrumb-container">
+    <a class="breadcrumb-path" href="/">Home</a>
+    {% set current = section | default(value=page) %}
+    {% for ancestor in current.ancestors %}
+      {% if loop.first %}
+        {% continue %}
+      {% endif %}
+      <span class="breadcrumb-separator">></span>
+      {% set section = get_section(path=ancestor) %}
+      <a class="breadcrumb-path" href="{{ section.permalink }}">{{ section.title }}</a>
+    {% endfor %}
+    <span class="breadcrumb-separator">></span>
+    {% if current.slug %}
+      {{ current.slug }}
+    {% else %}
+      {{ current.title }}
+    {% endif %}
+</h4>
+{% endblock breadcrumb %}

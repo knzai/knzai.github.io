@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar, .breadcrumb-container {
   display: none !important;
 }
 
@@ -16,4 +16,8 @@
   padding-left:  1rem;
   padding-right: 1rem;
   margin: 0 auto;
+}
+
+.gdoc-header {
+  display: block !important;
 }

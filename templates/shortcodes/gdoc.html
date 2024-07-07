@@ -7,4 +7,7 @@ regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) |
 regex_replace(pattern=`(?<close>\})`, rep=`$close
 .embed `) | 
 regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
-$open`) | safe }}
+$open`) | 
+regex_replace(pattern=`doc\-content">`, rep=`doc-content"><div class="gdoc-header">`) | 
+regex_replace(pattern=`(<h1)+?`, rep=`</div><h1`) | 
+safe }}
