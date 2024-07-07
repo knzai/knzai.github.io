@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% set section = get_section(path="projects/_index.md") %}
+  {% include "_breadcrumb.html" %}
+  {% include "_section.html" %}
   {% set section = get_section(path="posts/_index.md") %}
+  {% include "_breadcrumb.html" %}
   {% include "_section.html" %}
   {% set page = get_page(path="resume.md") %}
   <hr>

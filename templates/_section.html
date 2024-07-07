@@ -7,8 +7,13 @@
         {% if page.date %}
           <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
         {% endif %}
-        {{ page.summary | safe }}
-        <p class="continue-reading"><a href="{{ page.permalink }}#continue-reading">Continue Reading</a></p>
+        {% if page.summary %}
+          {{ page.summary | safe }}
+          <p class="continue-reading"><a href="{{ page.permalink }}#continue-reading">Continue Reading</a></p>
+        {% else %}
+          {{ page.content | safe }}
+        {% endif %}
+
       </div>
     {% endfor %}
   </div>
