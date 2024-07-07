@@ -7,8 +7,12 @@
       <!-- Enable responsiveness on mobile devices-->
       <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
-      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-      <link rel="icon" href="walle-female.svg">
+      <title>{% block title %}{{ config.title }}{% endblock title %}: actual human</title>
+      {% if config.base_url == "http://127.0.0.1:1111" %}
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+      {% else %}
+        <link rel="icon" href="walle-female.svg">
+      {% endif %}
       <!-- CSS -->
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
