@@ -1,0 +1,9 @@
+{%- if not navitem.extra.hide -%}
+  {%- if current_path and current_path is starting_with(navitem.path) %}
+    <li class="sidebar-nav-item active">{{navitem.title}}</li>
+  {%- else -%}
+    <li class="sidebar-nav-item">
+      <a href="{{ navitem.permalink }}" class=>{{navitem.title}}</a>
+    </li>
+  {%- endif -%}
+{%- endif -%}

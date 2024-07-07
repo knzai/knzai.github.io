@@ -1,6 +1,4 @@
   <div class="posts">
-    <h1><a href="{{ section.permalink }}">{{ section.title | safe }}</a></h1>
-    <hr />
     {% for page in section.pages | reverse %}
       <div class="post">
         <h2 class="post-title">
