@@ -7,6 +7,6 @@
 {% block content %}
 <div class="post embed">
 {{ section.content | 
-regex_replace(pattern=`doc\-content">(\n|.)+?<h1`, rep=`doc-content"><h1`) | safe }}
+section.content | safe }}
 </div>
 {% endblock content %}
