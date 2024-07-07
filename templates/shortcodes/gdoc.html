@@ -10,4 +10,5 @@ regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
 $open`) | 
 regex_replace(pattern=`doc\-content">`, rep=`doc-content"><div class="gdoc-header">`) | 
 regex_replace(pattern=`(<h1)+?`, rep=`</div><h1`) | 
+regex_replace(pattern=`https://www.google.com/url\?q=(?<url>[^&]*)[^"]+`, rep=`$url`) | 
 safe }}
