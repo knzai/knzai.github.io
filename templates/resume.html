@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="breadcrumb-container">
+  <a class="breadcrumb-path" href="/">Home</a>
+  <span class="breadcrumb-separator">/</span>
+  Resume
+  <span class="breadcrumb-separator">/</span>
+  <a href="https://docs.google.com/document/d/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU">Google Doc</a>
+  <span class="breadcrumb-separator">/</span>
+  <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
+  <hr />
+</div>
+{% include "_resume.html" %}
+{% endblock content %}

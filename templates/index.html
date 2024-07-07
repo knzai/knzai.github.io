@@ -2,18 +2,14 @@
 
 {% block content %}
   {% set section = get_section(path="posts/_index.md") %}
-  <div class="posts">
-    <h1><a href="{{ section.permalink }}">{{ section.title | safe }}</a></h1>
-    {% for page in section.pages | reverse %}
-      <div class="post">
-        <h2 class="post-title">
-          <a href="{{ page.permalink }}">{{ page.title | safe }}</a>
-        </h2>
-        {% if page.date %}
-          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-        {% endif %}
-        {{ page.summary | safe }}
-      </div>
-    {% endfor %}
-  </div>
+  {% include "_section.html" %}
+  {% set page = get_page(path="resume.md") %}
+  <h2 class="post-title">
+    <a href="{{ page.permalink }}">{{ page.title | safe }}</a>
+    <span class="breadcrumb-separator">/</span>
+    <a href="https://docs.google.com/document/d/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU">Google Doc</a>
+    <span class="breadcrumb-separator">/</span>
+    <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
+  </h2>
+  {% include "_resume.html" %}
 {% endblock content %}

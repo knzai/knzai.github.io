@@ -1,7 +1,6 @@
-{% extends "base.html" %}
-
-{% block content %}
-{% include "_breadcrumb.html" %}
+  <div class="posts">
+    <h1><a href="{{ section.permalink }}">{{ section.title | safe }}</a></h1>
+    <hr />
     {% for page in section.pages | reverse %}
       <div class="post">
         <h2 class="post-title">
@@ -11,8 +10,6 @@
           <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
         {% endif %}
         {{ page.summary | safe }}
-        <a href="{{ page.permalink }}#continue-reading">Continue Reading</a>
       </div>
     {% endfor %}
   </div>
-{% endblock content %}

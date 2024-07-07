@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% include "_breadcrumb.html" %}
 <div class="post">
   <h1 class="post-title">
     <a href="{{ page.permalink }}">{{ page.title | safe }}</a>

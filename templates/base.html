@@ -18,6 +18,7 @@
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="{{ get_url(path="hyde.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="{{ get_url(path="styles.css", trailing_slash=false) }}">
+      <link rel="stylesheet" href="{{ get_url(path="gdoc.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
       {% if config.generate_feed %}
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
@@ -31,7 +32,31 @@
         {% block sidebar %}
             <div class="sidebar">
                 <div class="container {% if config.extra.sidebar_sticky %}sidebar-sticky{% endif %}">
-                    <div class="sidebar-about">
+                    <ul class="sidebar-nav">
+
+                    {%- set index = get_section(path="_index.md") -%}
+
+                    {%- for s in index.subsections | reverse -%}
+                    {%- set subsection = get_section(path=s) -%}
+                      {%- if not subsection.extra.hide -%}
+                      <li class="sidebar-nav-item"><a href="{{ subsection.permalink }}" class="
+                        {%- if current_path %}{% if current_path is starting_with(subsection.path) %} active{% endif %}{% endif -%}
+                        ">{{subsection.title}}</a></li>
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- for p in index.pages %}
+                      {%- if not p.extra.hide -%}
+                      <li class="sidebar-nav-item"><a href="{{ p.permalink }}" class="
+                        {%- if current_path %}{% if current_path == p.path %} active{% endif %}{% endif -%}
+                        ">{{p.title}}</a></li>
+                      {%- endif -%}
+                    {% endfor %}
+    
+
+                  
+                  </ul>
+                                <div class="sidebar-about">
                         {% block sidebar_about %}
                             <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
                             {% if config.description %}
@@ -41,16 +66,13 @@
                     </div>
 
                     <ul class="sidebar-nav">
-                        {% block sidebar_nav %}
                         {% for link in config.extra.sidebar_links %}
                         <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
                         {% endfor %}
-                        {% endblock sidebar_nav %}
                     </ul>
                 </div>
             </div>
         {% endblock sidebar %}
-
         <div class="content container">
             {% block content %}
             {% endblock content %}

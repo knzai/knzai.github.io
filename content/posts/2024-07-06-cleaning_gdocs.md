@@ -1,5 +1,5 @@
 +++
-title = "Cleaning up web published Google Docs"
+title = "Cleaning Up Web Published Google Docs"
 date = 2024-07-06
 +++
 As you probably know, Google Docs "Publish to Web" settings don't provide the cleanest html, not to mention the giant header it tacks on.
