@@ -15,6 +15,6 @@ sidebar_links = [
     {url = "https://github.com/knzai", name = "GitHub"},
     {url = "https://www.linkedin.com/in/knzai/", name = "LinkedIn"},
     {url = "mailto:site@knz.ai", name = "site@knz.ai"},
-    {url = "Kenzi Connor Resume.pdf", name = "resume.pdf"},
+    {url = "/assets/Kenzi Connor Resume.pdf", name = "resume.pdf"},
 ]
 sidebar_sticky = true

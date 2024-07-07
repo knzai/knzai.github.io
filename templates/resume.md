@@ -6,7 +6,6 @@
 
 {% block content %}
 <div class="post embed">
-{{ section.content | 
-section.content | safe }}
+{{ page.content | safe }}
 </div>
 {% endblock content %}
