@@ -1,4 +1,4 @@
 +++
-title = "Posts"
+title = "posts"
 template = "section.html"
 +++
