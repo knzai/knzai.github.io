@@ -14,6 +14,9 @@
         <loc>https://knz.ai/projects/</loc>
     </url>
     <url>
+        <loc>https://knz.ai/projects/cega/</loc>
+    </url>
+    <url>
         <loc>https://knz.ai/projects/zola-build/</loc>
     </url>
     <url>
@@ -24,6 +27,9 @@
     </url>
     <url>
         <loc>https://knz.ai/zola-build/</loc>
+    </url>
+    <url>
+        <loc>https://knz.ai/zola-cli-copy/</loc>
     </url>
     <url>
         <loc>https://knz.ai/zola-cli/</loc>
