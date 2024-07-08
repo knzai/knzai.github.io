@@ -1,15 +1,14 @@
 {{ load_data(url=url) | 
 regex_replace(pattern=`<head[\s\S]+?<\/head>`, rep=` `) | 
 regex_replace(pattern=`<script[\s\S]+?<\/script>`, rep=` `) | 
-replace(from="<!DOCTYPE html>", to="") | 
+replace(from="<!DOCTYPE html>", to="") |
 regex_replace(pattern=`ul\.[^}]+}`, rep=``) | 
 regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) | 
 regex_replace(pattern=`(?<close>\})`, rep=`$close
 .doc-content `) | 
-regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
-$open`) | 
 regex_replace(pattern=`doc\-content">`, rep=`doc-content"><div class="gdoc-header">`) | 
 regex_replace(pattern=`(<table)+?`, rep=`</div><table`) | 
 regex_replace(pattern=`https://www.google.com/url\?q=(?<url>[^&]*)[^"]+`, rep=`$url`) |
 regex_replace(pattern=`\s`, rep=` `) |
 safe }}
+
