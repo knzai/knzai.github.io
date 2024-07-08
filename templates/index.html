@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 
 {% block content %}
   {% set section = get_section(path="projects/_index.md") %}
@@ -9,6 +9,6 @@
 
   {% set section = get_page(path="resume.md") %}
   {% set page = section %}
-  {% include "_breadcrumb.html" %}  
+  {% include "layouts/_breadcrumb.html" %}  
   {% include "_resume.html" %}
 {% endblock content %}

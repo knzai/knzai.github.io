@@ -1,5 +1,6 @@
 +++
-title = "zola-build: A Github Action to build and deploy a zola site using zola-cli"
+title = "zola-build"
+description = "A Github Action to build and deploy a zola site using zola-cli"
 +++
 
 - Github Repository: [knzai/zola-build](https://github.com/knzai/zola-build)
