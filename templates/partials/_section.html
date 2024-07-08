@@ -1,0 +1,7 @@
+<div class="posts">
+  {% for page in section.pages | reverse %}
+    {% set summarize = true %}
+    {% include "partials/_page.html" %}
+  {% endfor %}
+</div>
+<hr />

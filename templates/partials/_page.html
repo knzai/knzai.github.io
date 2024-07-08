@@ -1,0 +1,10 @@
+<div class="post">
+  {% include "partials/_page_title.html" %}
+  {% if page.date %}<span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
+  {% if summarize and page.summary %}
+    {{ page.summary | safe }}
+    <p class="continue-reading"><a href="{{ page.permalink }}#continue-reading">Continue Reading</a></p>
+  {% else %}
+    {{ page.content | safe }}
+  {% endif %}
+</div>

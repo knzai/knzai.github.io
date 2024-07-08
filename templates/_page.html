@@ -1,6 +1,0 @@
-{% include "layouts/_breadcrumb.html" %}
-<div class="post">
-  {% include "_page_title.html" %}
-  {% if page.date %}<span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
-  {{ page.content | safe }}
-</div>
