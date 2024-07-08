@@ -16,7 +16,7 @@
          {% set title = current.title%}
     {% endif%}
     {% if current_path == "/" %}
-      <a class="breadcrumb-path" href="{{ current.permalink }}">{{ title }}</a>
+      <a class="breadcrumb-path" href="{{ current.permalink }}" id="{{ title }}">{{ title }}</a>
     {% else%}
       {{ title }}
     {% endif%}
