@@ -5,7 +5,7 @@ replace(from="<!DOCTYPE html>", to="") |
 regex_replace(pattern=`ul\.[^}]+}`, rep=``) | 
 regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) | 
 regex_replace(pattern=`(?<close>\})`, rep=`$close
-.embed `) | 
+.doc-content `) | 
 regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
 $open`) | 
 regex_replace(pattern=`doc\-content">`, rep=`doc-content"><div class="gdoc-header">`) | 

@@ -21,7 +21,7 @@ If I was working in with a ruby app, I'd just ~~hack~~ metaprogram in/dynamicall
 
 As any polyglot programmer can attest, regular expression support across languages varies *heavily*. It's not even just the level of advanced features that are different, but the syntaxes for calling them vary and are famously abstruse. Rust doesn't have native regex support, but everyone seems to use [the same regex crate](https://crates.io/crates/regex) so even before I double-checked (I did, they do), I could assume that basic level of support.
 
-Given the constraints of chaining regex filters without full programmability, no solution I came up with going to be pretty. But this works for the basics of stripping out unneeded styles, prefacing excessively broad selectors with a class to not break other formatting, adding line-breaks for readability, etc. I even threw a class around the header content (everything before the first `<h1>`) that redundantly matches my site sidebar, so I could easily hide it with css for the screen view and show it for print view (since that just hides the whole sidebar). And heck, it's not like Rust doesn't start to look a little like line-noise once the type signatures get complicated enough, so a little regex shouldn't scare anyone:
+Given the constraints of chaining regex filters without full programmability, no solution I came up with going to be pretty. But this works for the basics of stripping out unneeded styles, prefacing excessively broad selectors with `.doc-content` to not break other formatting, adding line-breaks for readability, etc. I even threw a class around the header content (everything before the first `<table>` in my case) that redundantly matches my site sidebar, so I could easily hide it with css for the screen view and show it for print view (since that just hides the whole sidebar). And heck, it's not like Rust doesn't start to look a little like line-noise once the type signatures get complicated enough, so a little regex shouldn't scare anyone:
 
 ```
 {{ load_data(url=url) | 
@@ -31,10 +31,12 @@ replace(from="<!DOCTYPE html>", to="") |
 regex_replace(pattern=`ul\.[^}]+}`, rep=``) | 
 regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) | 
 regex_replace(pattern=`(?<close>\})`, rep=`$close
-.embed `) | 
+.doc-content `) | 
 regex_replace(pattern=`(?<close>>)(?<open><)`, rep=`$close
 $open`) | 
 regex_replace(pattern=`doc\-content">`, rep=`doc-content"><div class="gdoc-header">`) | 
-regex_replace(pattern=`(<h1)+?`, rep=`</div><h1`) | 
+regex_replace(pattern=`(<table)+?`, rep=`</div><table`) | 
+regex_replace(pattern=`https://www.google.com/url\?q=(?<url>[^&]*)[^"]+`, rep=`$url`) |
+regex_replace(pattern=`\s`, rep=` `) |
 safe }}
 ````
