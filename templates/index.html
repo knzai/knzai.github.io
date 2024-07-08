@@ -2,20 +2,13 @@
 
 {% block content %}
   {% set section = get_section(path="projects/_index.md") %}
-  {% include "_breadcrumb.html" %}
   {% include "_section.html" %}
     
   {% set section = get_section(path="posts/_index.md") %}
-  {% include "_breadcrumb.html" %}
   {% include "_section.html" %}
 
   {% set section = get_page(path="resume.md") %}
   {% set page = section %}
   {% include "_breadcrumb.html" %}  
-  <h2>
-    <a href="/resume/">resume.html</a> 
-    / <a href="https://docs.google.com/document/d/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU">resume.gdoc</a>
-    / <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
-  </h2>
   {% include "_resume.html" %}
 {% endblock content %}

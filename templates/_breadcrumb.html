@@ -1,5 +1,5 @@
 {% block breadcrumb %}
-<h4 class="breadcrumb-container">
+<div class="breadcrumb-container">
     {% set current = section | default(value=page) %}
     {% for ancestor in current.ancestors %}
       {% set section = get_section(path=ancestor) %}
@@ -20,5 +20,5 @@
     {% else%}
       {{ title }}
     {% endif%}
-</h4>
+</div>
 {% endblock breadcrumb %}
