@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="breadcrumb-container">
-  <a class="breadcrumb-path" href="/">Home</a>
-  <span class="breadcrumb-separator">></span>
-  resume.html
-  <span class="breadcrumb-separator">/</span>
+{% include "_breadcrumb.html" %}
+<h2>
+  resume.html /
   <a href="https://docs.google.com/document/d/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU">resume.gdoc</a>
-  <span class="breadcrumb-separator">/</span>
-  <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
+  / <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
 </h2>
 {% include "_resume.html" %}
 {% endblock content %}
