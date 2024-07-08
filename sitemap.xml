@@ -22,4 +22,10 @@
     <url>
         <loc>https://knz.ai/resume/</loc>
     </url>
+    <url>
+        <loc>https://knz.ai/zola-build/</loc>
+    </url>
+    <url>
+        <loc>https://knz.ai/zola-cli/</loc>
+    </url>
 </urlset>
