@@ -3,12 +3,8 @@
 {% block content %}
 {% include "layouts/_breadcrumb.html" %}
 <div class="post">
-  <h2 class="post-title">
-    <a href="{{ page.permalink }}">{{ page.title | safe }}</a>{% if page.description%}: <span class="post-description">{{ page.description | safe}}</span>{%endif%}
-  </h2>
-  {% if page.date %}
-    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-  {% endif %}
+  {% include "_page_title.html" %}
+  {% if page.date %}<span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
   {{ page.content | safe }}
 </div>
 {% endblock content %}
