@@ -103,7 +103,7 @@
 <p>This means I needed to process the html somewhere between when google publishes it and my final static site. I first played with a <a href="https://gdoc.pub/">service to cleanup the GDoc html</a> but I needed additional reprocessing for my specific document (my resume) to look good. Then I considered setting up <a href="https://github.com/augnustin/google-docs-publisher">that same code</a> as a one-off microservice to clean my doc and add some of my own tweaks. But the whole point of using a static site generator is you can just the resultant HTML somewhere and not have run an another service. So I started looking into what processing I could do of external content in Zola.</p>
 <p>If I was working in with a ruby app, I'd just <del>hack</del> metaprogram in/dynamically add what I needed, but I'm working with Rust for this. So I checked out the <a href="https://keats.github.io/tera/docs/#filters">filters the Tera templating engine</a>, the one used by Zola, provides and didn't quite find what I needed. Then I noticed that <a href="https://www.getzola.org/documentation/templates/overview/#regex-replace">Zola actually adds in some additional filters</a>, including that glorious hammer for all string processing nails, <a href="https://en.wikipedia.org/wiki/Regular_expression">regex</a>.</p>
 <p>As any polyglot programmer can attest, regular expression support across languages varies <em>heavily</em>. It's not even just the level of advanced features that are different, but the syntaxes for calling them vary and are famously abstruse. Rust doesn't have native regex support, but everyone seems to use <a href="https://crates.io/crates/regex">the same regex crate</a> so even before I double-checked (I did, they do), I could assume that basic level of support.</p>
-<p>Given the constraints of chaining regex filters without full programmability, no solution I came up with going to be pretty. But this works for the basics of stripping out unneeded styles, prefacing excessively broad selectors with a class to not break other formatting, adding line-breaks for readability, etc. I even threw a class around the header content (everything before the first <code>&lt;h1&gt;</code>) that redundantly matches my site sidebar, so I could easily hide it with css for the screen view and show it for print view (since that just hides the whole sidebar). And heck, it's not like Rust doesn't start to look a little like line-noise once the type signatures get complicated enough, so a little regex shouldn't scare anyone:</p>
+<p>Given the constraints of chaining regex filters without full programmability, no solution I came up with going to be pretty. But this works for the basics of stripping out unneeded styles, prefacing excessively broad selectors with <code>.doc-content</code> to not break other formatting, adding line-breaks for readability, etc. I even threw a class around the header content (everything before the first <code>&lt;table&gt;</code> in my case) that redundantly matches my site sidebar, so I could easily hide it with css for the screen view and show it for print view (since that just hides the whole sidebar). And heck, it's not like Rust doesn't start to look a little like line-noise once the type signatures get complicated enough, so a little regex shouldn't scare anyone:</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{{ load_data(url=url) | 
 </span><span>regex_replace(pattern=`&lt;head[\s\S]+?&lt;\/head&gt;`, rep=` `) | 
 </span><span>regex_replace(pattern=`&lt;script[\s\S]+?&lt;\/script&gt;`, rep=` `) | 
@@ -111,11 +111,13 @@
 </span><span>regex_replace(pattern=`ul\.[^}]+}`, rep=``) | 
 </span><span>regex_replace(pattern=`\.lst\-kix[^}]+}`, rep=``) | 
 </span><span>regex_replace(pattern=`(?&lt;close&gt;\})`, rep=`$close
-</span><span>.embed `) | 
+</span><span>.doc-content `) | 
 </span><span>regex_replace(pattern=`(?&lt;close&gt;&gt;)(?&lt;open&gt;&lt;)`, rep=`$close
 </span><span>$open`) | 
 </span><span>regex_replace(pattern=`doc\-content&quot;&gt;`, rep=`doc-content&quot;&gt;&lt;div class=&quot;gdoc-header&quot;&gt;`) | 
-</span><span>regex_replace(pattern=`(&lt;h1)+?`, rep=`&lt;/div&gt;&lt;h1`) | 
+</span><span>regex_replace(pattern=`(&lt;table)+?`, rep=`&lt;/div&gt;&lt;table`) | 
+</span><span>regex_replace(pattern=`https://www.google.com/url\?q=(?&lt;url&gt;[^&amp;]*)[^&quot;]+`, rep=`$url`) |
+</span><span>regex_replace(pattern=`\s`, rep=` `) |
 </span><span>safe }}
 </span></code></pre>
 
