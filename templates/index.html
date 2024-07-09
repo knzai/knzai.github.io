@@ -4,6 +4,8 @@
   {%- set index = get_section(path="_index.md") -%}
   {%- for s in index.subsections | reverse -%}
     {%- set section = get_section(path=s) -%}
+    {%- if section.extra.hide -%}{%continue%}{%endif%}
+
     {%- include "partials/_breadcrumb.html" -%}
     {%- include "partials/_section.html" -%}
   {%- endfor -%}

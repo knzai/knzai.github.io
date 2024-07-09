@@ -1,8 +1,6 @@
 +++
 title = "zolaction"
 description = "A GH Action that install, checks, builds, and deploys a zola site"
-[extra]
-hide=true
 +++
 
 - Language/Platform: Github Actions (bash and yml)
