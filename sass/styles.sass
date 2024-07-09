@@ -2,11 +2,11 @@
   padding: 0
   table
     border: 0 !important
-    margin-bottom: 0
+    margin-bottom: 0 !important
     tbody tr td
       background-color: white
     td + td
-      border-left: 10px solid white !important
+      border-left: 20px solid white !important
     tr + tr
       border-top: 10px solid white !important
   p, h1, h2, h3
@@ -19,7 +19,7 @@
     margin-top: 5px !important
   h2
     margin-top: 10px !important
-  ul + h1
+  h1:not(:first-child)
     margin-top: 10px !important
   h1 + h2
     margin-top: 0 !important
@@ -46,7 +46,7 @@
     padding-left: 12px !important
   li
     margin-left: 0 !important
-
+    margin-right: 0 !important
     
 .gdoc-header
   display: none
