@@ -5,6 +5,9 @@ description = "A Github Action to build and deploy a zola site using zola-cli"
 hide=true
 +++
 
+### Deprecated in favor of: [knzai/zolaction](/zolaction) 
+
+
 - Language/Platform: Github Actions (bash and yml)
 - Github Repository: [knzai/zola-build](https://github.com/knzai/zola-build)
 - Github Marketplace: [actions/zola-build](https://github.com/marketplace/actions/zola-build)

@@ -5,6 +5,8 @@ description = "A GH Action that uses the zola CLI (install, build, and check)"
 hide=true
 +++
 
+### Deprecated in favor of: [knzai/zolaction](/zolaction) 
+
 - Language/Platform: Github Actions (bash and yml)
 - Github Repository: [knzai/zola-cli](https://github.com/knzai/zola-cli)
 - Github Marketplace: [actions/zola-cli](https://github.com/marketplace/actions/zola-cli)
