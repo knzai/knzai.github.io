@@ -1,6 +1,8 @@
 +++
 title = "zola-build"
 description = "A Github Action to build and deploy a zola site using zola-cli"
+[extra]
+hide=true
 +++
 
 - Language/Platform: Github Actions (bash and yml)

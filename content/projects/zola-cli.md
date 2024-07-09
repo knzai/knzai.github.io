@@ -1,6 +1,8 @@
 +++
 title = "zola-cli"
 description = "A GH Action that uses the zola CLI (install, build, and check)"
+[extra]
+hide=true
 +++
 
 - Language/Platform: Github Actions (bash and yml)
