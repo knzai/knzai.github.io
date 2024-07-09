@@ -26,6 +26,9 @@
         <loc>https://knz.ai/projects/zola-cli/</loc>
     </url>
     <url>
+        <loc>https://knz.ai/projects/zolaction/</loc>
+    </url>
+    <url>
         <loc>https://knz.ai/resume/</loc>
     </url>
     <url>
@@ -33,5 +36,8 @@
     </url>
     <url>
         <loc>https://knz.ai/zola-cli/</loc>
+    </url>
+    <url>
+        <loc>https://knz.ai/zolaction/</loc>
     </url>
 </urlset>
