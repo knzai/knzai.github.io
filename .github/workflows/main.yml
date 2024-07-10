@@ -18,5 +18,5 @@ jobs:
           mv tmp.pdf static/assets/Kenzi\ Connor\ Resume2.pdf
         else
           exit 1
-        endif
+        fi
     - uses: zolacti/on@main
