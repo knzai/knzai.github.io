@@ -102,11 +102,10 @@
     <p>It turns out that grabbing the current pdf export of my resume during zola build was even easier than <a href="https://knz.ai/posts/cleaning-gdocs/">cleaning the Google HTML</a>. Once you've setup the Google API keys it's basically one wget (which is already installed on their ubuntu runner) call.</p>
 <pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">download pdf
 </span><span>  </span><span style="color:#bf616a;">shell</span><span>: </span><span style="color:#a3be8c;">bash
-</span><span>  </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#b48ead;">&gt;
-</span><span style="color:#a3be8c;">    wget -O &#39;tmp.pdf&#39; --user-agent=&#39;github.com/knzai&#39; 
-</span><span style="color:#a3be8c;">    &#39;https://www.googleapis.com/drive/v2/files/${{ vars.GOOGLE_FILE_ID }}\
-</span><span style="color:#a3be8c;">    /export?mimeType=application/pdf&amp;key=${{ secrets.GOOGLE_API_KEY }}&#39;
-</span><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">replace pdf with newer, if valid
+</span><span>  </span><span style="color:#bf616a;">run</span><span>: &quot;</span><span style="color:#a3be8c;">wget -O &#39;tmp.pdf&#39; --user-agent=&#39;github.com/knzai&#39; </span><span style="color:#96b5b4;">\
+</span><span style="color:#a3be8c;">    &#39;https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}</span><span style="color:#96b5b4;">\
+</span><span style="color:#a3be8c;">    /export?mimeType=application/pdf&amp;key=${{secrets.GOOGLE_API_KEY}}&#39;</span><span>&quot;
+</span><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">replace pdf with newer, if valid (over 30k)
 </span><span>  </span><span style="color:#bf616a;">shell</span><span>: </span><span style="color:#a3be8c;">bash
 </span><span>  </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#b48ead;">|
 </span><span style="color:#a3be8c;">    if [ $(du -k &#39;tmp.pdf&#39; | cut -f1) -gt 30 ]; then
