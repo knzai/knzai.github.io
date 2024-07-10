@@ -7,4 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - shell: bash
+      run: |
+        wget -O 'static/assets/Kenzi Connor Resume2.pdf' https://www.googleapis.com/drive/v2/files/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU/export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}
     - uses: zolacti/on@main
