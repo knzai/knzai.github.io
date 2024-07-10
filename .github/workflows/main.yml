@@ -15,7 +15,7 @@ jobs:
       shell: bash
       run: |
         if [ $(du -k 'tmp.pdf' | cut -f1) -gt 30 ]; then
-          mv tmp.pdf static/assets/Kenzi\ Connor\ Resume2.pdf
+          mv tmp.pdf static/assets/Kenzi\ Connor\ Resume.pdf
         else
           exit 1
         fi
