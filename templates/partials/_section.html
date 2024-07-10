@@ -1,5 +1,5 @@
 <div class="posts">
-  {% for page in section.pages | reverse %}
+  {% for page in section.pages %}
     {%-if page.extra.hide-%}{%continue%}{%endif%}
     {% set summarize = true %}
     {% include "partials/_page.html" %}

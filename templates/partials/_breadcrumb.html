@@ -10,11 +10,7 @@
       {% endif %}
       <span class="breadcrumb-separator">></span>
     {% endfor %}
-    {% if current.slug %}
-         {% set title = current.slug%}
-       {% else%}
-         {% set title = current.title%}
-    {% endif%}
+    {% set title = current | get(key="slug", default=current.title)%}
     {% if current_path == "/" %}
       <a class="breadcrumb-path" href="{{ current.permalink }}" id="{{ title }}">{{ title }}</a>
     {% else%}
