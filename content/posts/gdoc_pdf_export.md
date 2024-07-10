@@ -8,11 +8,10 @@ It turns out that grabbing the current pdf export of my resume during zola build
 ```yml
 - name: download pdf
   shell: bash
-  run: >
-    wget -O 'tmp.pdf' --user-agent='github.com/knzai' 
-    'https://www.googleapis.com/drive/v2/files/${{ vars.GOOGLE_FILE_ID }}\
-    /export?mimeType=application/pdf&key=${{ secrets.GOOGLE_API_KEY }}'
-- name: replace pdf with newer, if valid
+  run: "wget -O 'tmp.pdf' --user-agent='github.com/knzai' \
+    'https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}\
+    /export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}'"
+- name: replace pdf with newer, if valid (over 30k)
   shell: bash
   run: |
     if [ $(du -k 'tmp.pdf' | cut -f1) -gt 30 ]; then
