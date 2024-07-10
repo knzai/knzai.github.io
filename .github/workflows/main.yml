@@ -7,10 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: download pdf and put in place
+    - name: download pdf
       shell: bash
       run: |
         wget -O 'tmp.pdf' --user-agent='github.com/knzai' 'https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}/export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}'
+    - name: replace pdf with newer if valid
+      shell: bash
+      run: |
         if [ $(du -k 'tmp.pdf' | cut -f1) -gt 30 ]; then
           mv tmp.pdf static/assets/Kenzi\ Connor\ Resume2.pdf
         else
