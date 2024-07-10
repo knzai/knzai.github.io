@@ -10,7 +10,7 @@ jobs:
     - name: download pdf and put in place
       shell: bash
       run: |
-        wget -O 'tmp.pdf' --user-agent='github.com/knzai' https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}/export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}
+        wget -O 'tmp.pdf' --user-agent='github.com/knzai' 'https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}/export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}'
         if [ $(du -k 'tmp.pdf' | cut -f1) -gt 30 ]; then
           mv tmp.pdf static/assets/Kenzi\ Connor\ Resume2.pdf
         else
