@@ -1,9 +1,12 @@
 # The URL the site will be built for
 base_url = "https://knz.ai"
 title = "Kenzi Connor"
+author = "Kenzi Connor"
 description = "Staff Software Engineer - VP Engineering - Director of Engineering - CEO & CTO"
 compile_sass = true
 build_search_index = true
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
 
 [markdown]
 highlight_code = true
