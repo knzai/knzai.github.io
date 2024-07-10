@@ -1,0 +1,1 @@
+{{ resize_image(path=path, width=width, height=height) | get(key='url') }}

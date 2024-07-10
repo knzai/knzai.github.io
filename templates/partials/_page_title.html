@@ -1,10 +1,10 @@
-{%if page.title == "resume" %}
+{%if page.extra | get(key="custom_title", default="") == "resume" %}
   <h2 class="post-title resume">
     {%if current_path == "/"%} <a href="/resume/">resume.html</a> {%else%}resume.html{%endif%}
     / <a href="https://docs.google.com/document/d/1kIqp7dlp3ve_OZwADFs-07_ufVsyChBLz_1YKgn8ElU">resume.gdoc</a>
     / <a href="/assets/Kenzi Connor Resume.pdf">resume.pdf</a>
   </h2>
-{% else %}
+{% elif not page.extra.skip_title %}
   <h2 class="post-title">
     <a href="{{ page.permalink }}" id="{{ page.title | safe }}">{{ page.title | safe }}</a>{% if page.description%}: <span class="post-description">{{ page.description | safe}}</span>{% endif %}
   </h2>

@@ -14,4 +14,4 @@ hide=true
 
 A [composite action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) that builds and/or deploys a [zola](https://www.getzola.org/) site. Full documentation on the GH repo README
 
-![image](/assets/images/projects/zola-build.png)
+![image](/projects/zola-build.png)

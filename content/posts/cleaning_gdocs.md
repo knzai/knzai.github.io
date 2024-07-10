@@ -5,7 +5,7 @@ date = 2024-07-06
 +++
 As you probably know, Google Docs "Publish to Web" settings doesn't provide the cleanest html, not to mention the giant header it tacks on.
 
-![image](/assets/images/posts/gdocs_header.png)
+![image](/posts/gdocs_header.png)
 
 <!-- more --> 
 

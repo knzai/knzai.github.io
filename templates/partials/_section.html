@@ -1,8 +1,15 @@
 <div class="posts">
-  {% for page in section.pages %}
-    {%-if page.extra.hide-%}{%continue%}{%endif%}
-    {% set summarize = true %}
+  {% set pages = section.pages %}
+  {% if pages %}
+    {% for page in pages %}
+      {%-if page.extra.hide-%}{%continue%}{%endif%}
+      {% set summarize = true %}
+      {% include "partials/_page.html" %}
+    {% endfor %}
+  {% else %}
+    {% set page = section %}
     {% include "partials/_page.html" %}
-  {% endfor %}
+  {% endif %}
+
 </div>
 <hr />

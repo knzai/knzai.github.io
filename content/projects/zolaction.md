@@ -9,4 +9,4 @@ description = "A GH Action that install, checks, builds, and deploys a zola site
 
 A [composite action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) that does an idempotent install of [zola](https://www.getzola.org/) and calls its [CLI](https://www.getzola.org/documentation/getting-started/cli-usage/) to build and optionally deploy a site to Github Pages. Full documentation on the GH repo README
 
-![image](/assets/images/projects/zolaction.png)
+![image](/projects/zolaction.png)

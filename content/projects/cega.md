@@ -9,4 +9,4 @@ description = "CGA/EGA graphics binary file parsing with terminal art preview an
 
 Full documentation on the GH repo README
 
-![image](/assets/images/projects/cega.png)
+![image](/projects/cega.png)

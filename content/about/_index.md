@@ -1,8 +1,12 @@
 +++
 title = "about"
 draft = true
+weight = 5
+[extra]
+skip_title=true
 +++
-Despite my cheeky domain and page title choices, I am very much a human, with decades of experience as a software engineer, engineering manager, and tech executive.
+
+<img src="{{resize_image(path='/assets/images/me.jpg', width=200, height=200) }}"/>Despite my cheeky domain, I am very much a human, with decades of experience as a software engineer, engineering manager, and tech executive.
 
 As a manager I try to be warm and approachable and create a space of safety and open communication so we can still set team expectations very high without also creating anxiety, a constant sense of being under the gun, and burnout leading to retention problems by doing so by fiat. I approach all situations with my team from a place of curiousity and frequently have been able to turn around performance issues that would traditionally have led to a PIP and loss of talent. I beleive strongly in servant leadership and that my place is not to make technical decisions for them, but to help them grow into a team that can make the right decisions as often as possible, and learn from the wrong ones when not.
 
