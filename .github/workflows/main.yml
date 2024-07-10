@@ -10,7 +10,9 @@ jobs:
     - name: download pdf
       shell: bash
       run: |
-        wget -O 'tmp.pdf' --user-agent='github.com/knzai' 'https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}/export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}'
+        wget -O 'tmp.pdf' --user-agent='github.com/knzai' \
+        'https://www.googleapis.com/drive/v2/files/${{vars.GOOGLE_FILE_ID}}\
+        /export?mimeType=application/pdf&key=${{secrets.GOOGLE_API_KEY}}'
     - name: replace pdf with newer if valid
       shell: bash
       run: |
