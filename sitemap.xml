@@ -4,9 +4,6 @@
         <loc>https://knz.ai/</loc>
     </url>
     <url>
-        <loc>https://knz.ai/cega/</loc>
-    </url>
-    <url>
         <loc>https://knz.ai/posts/</loc>
     </url>
     <url>
@@ -24,24 +21,9 @@
         <loc>https://knz.ai/projects/cega/</loc>
     </url>
     <url>
-        <loc>https://knz.ai/projects/zola-build/</loc>
-    </url>
-    <url>
-        <loc>https://knz.ai/projects/zola-cli/</loc>
-    </url>
-    <url>
         <loc>https://knz.ai/projects/zolaction/</loc>
     </url>
     <url>
         <loc>https://knz.ai/resume/</loc>
-    </url>
-    <url>
-        <loc>https://knz.ai/zola-build/</loc>
-    </url>
-    <url>
-        <loc>https://knz.ai/zola-cli/</loc>
-    </url>
-    <url>
-        <loc>https://knz.ai/zolaction/</loc>
     </url>
 </urlset>
