@@ -10,4 +10,6 @@ jobs:
     - name: download assets
       shell: bash
       run: "./fetch_assets.sh"
+      env:
+        GAPI_KEY: ${{secrets.GOOGLE_API_KEY}}
     - uses: zolacti/on@main
