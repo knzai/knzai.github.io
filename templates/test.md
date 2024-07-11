@@ -1,0 +1,1 @@
+{%-set url = "https://www.googleapis.com/drive/v2/files/" ~ page.extra.file_id ~  "/export?mimeType=application/pdf&key=" ~ get_env(name="GAPI_KEY")-%}{{- load_data(url=url) | safe -}}
