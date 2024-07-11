@@ -1,6 +1,7 @@
 +++
 title = "zolaction"
 description = "A GH Action that install, checks, builds, and deploys a zola site"
+aliases = ["/zola-build", "/zola-cli", "/zolaction", "/projects/zola-build", "/projects/zola-build"]
 +++
 
 - Language/Platform: Github Actions (bash and yml)
