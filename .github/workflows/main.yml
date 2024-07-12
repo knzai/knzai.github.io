@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: download assets
+    - name: download gdrive files
       shell: bash
-      run: "./get_gdrive_files.sh gdrive_files.csv"
+      run: |
+        curl -s -L https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw > ggdrive.sh
+        bash ggdrive.sh gdrive_files.csv
       env:
         GAPI_KEY: ${{secrets.GOOGLE_API_KEY}}
     - uses: zolacti/on@main
