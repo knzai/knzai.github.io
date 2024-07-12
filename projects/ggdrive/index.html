@@ -96,7 +96,7 @@
 <li>Github Repository: <a href="https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9">gist</a></li>
 </ul>
 <p>Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./get_gdrive_files.sh -h
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./ggdrive.sh -h
 </span><span>
 </span><span> </span><span style="color:#bf616a;">SYNOPSIS
 </span><span>    </span><span style="color:#bf616a;">GAPI_KEY</span><span>=**** </span><span style="color:#bf616a;">ggdrive.sh </span><span style="color:#b48ead;">[</span><span>-egtuhv</span><span style="color:#b48ead;">] </span><span>&lt;csvfile&gt; </span><span style="color:#65737e;">#-h or --help for more details
@@ -118,7 +118,7 @@
 </span><span>    </span><span style="color:#bf616a;">-v, --version     </span><span style="color:#65737e;">#Print script information
 </span><span>
 </span><span> </span><span style="color:#65737e;">#CURL USAGE - if it gets popular rate limiting, but that&#39;s not a concern now
-</span><span>    </span><span style="color:#bf616a;">CSVFILE</span><span>=</span><span style="color:#a3be8c;">gdrive_files.csv </span><span>&amp;&amp; </span><span style="color:#bf616a;">GGTEMP</span><span>=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">mktemp -t</span><span style="color:#a3be8c;"> get_gdrive_filesXXXXXXXXXX.sh)\
+</span><span>    </span><span style="color:#bf616a;">CSVFILE</span><span>=</span><span style="color:#a3be8c;">gdrive_files.csv </span><span>&amp;&amp; </span><span style="color:#bf616a;">GGTEMP</span><span>=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">mktemp -t</span><span style="color:#a3be8c;"> ggdriveXXXXXXXXXX.sh)\
 </span><span>      &amp;&amp; </span><span style="color:#bf616a;">curl -s -L</span><span> https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw\
 </span><span>      &gt; $</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">bash </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>$</span><span style="color:#bf616a;">CSVFILE </span><span>&amp;&amp; </span><span style="color:#96b5b4;">echo </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">rm </span><span>$</span><span style="color:#bf616a;">GGTEMP
 </span></code></pre>
