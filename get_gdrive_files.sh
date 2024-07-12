@@ -23,6 +23,11 @@ set -e #since I call this from a GH Action better to always know if it'll fail
 #%    -h, --help        Print this help
 #%    -v, --version     Print script information
 #%
+#% CURL USAGE - if it gets popular rate limiting, but that's not a concern now
+#%    CSVFILE=gdrive_files.csv && GGTEMP=$(mktemp -t get_gdrive_filesXXXXXXXXXX.sh)\
+#%      && curl -s -L https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw\
+#%      > $GGTEMP && bash $GGTEMP $CSVFILE && echo $GGTEMP && rm $GGTEMP
+#% 
 #% EXAMPLES
 #%    # Standard usage
 #%    ${SCRIPT_NAME} path/to/csv
@@ -39,6 +44,8 @@ set -e #since I call this from a GH Action better to always know if it'll fail
 #-    author          Kenzi Connor
 #-    copyright       Copyright (c) Public Domain
 #-    license         Public Domain via Unlicense (see footer)
+#-    site            knz.ai/ggdrive
+#-    source          https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9
 #-
 #===============================================================================
 #  ATTRIBUTIONS
@@ -49,7 +56,7 @@ set -e #since I call this from a GH Action better to always know if it'll fail
 #===============================================================================
 #  HISTORY
 #     2024/07/10 : 0.0.1 : knzai : Script creation
-#     2024/07/11 : 0.0.2 : knzai : Cleaned up, comment, add help for gist usage
+#     2024/07/11 : 0.0.2 : knzai : Cleaned up, comment, add help and usage
 # 
 #===============================================================================
 # END_OF_HEADER
