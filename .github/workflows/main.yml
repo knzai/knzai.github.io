@@ -13,5 +13,7 @@ jobs:
         curl -s -L https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw > ggdrive.sh
         bash ggdrive.sh gdrive_files.csv
       env:
+        #do both since gist updates can be slow
+        G_API_KEY: ${{secrets.GOOGLE_API_KEY}}
         GAPI_KEY: ${{secrets.GOOGLE_API_KEY}}
     - uses: zolacti/on@main
