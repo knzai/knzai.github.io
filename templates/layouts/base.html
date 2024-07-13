@@ -4,6 +4,9 @@
       {% include "layouts/_head.html" %}
       {% block extra_head %}
       {% endblock extra_head %}
+      {% block open_graph}
+        <meta property="og:image" content="/assets/images/me.jpg" />
+      {% endblock open_graph %}
     </head>
     <body class="{{ config.extra.color_theme }} {% if config.extra.sidebar_reverse %}layout-reverse{% endif %}">
       <div class="sidebar">
