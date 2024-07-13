@@ -10,29 +10,29 @@ aliases = ["/ggdrive"]
 Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site
 
 ```bash
-./ggdrive.sh -h
+Name: ggdrive.sh (1.2.0)
+Description: Download google drive file exports, eg gdocs -> pdf
+Usage: 
+<G_API_KEY=XXXX> ./ggdrive.sh [-h, --help] [-v] [-e] [-g <g_api>] [-t <tempfile>] [-u <user_agent>] [csv_file]
 
- SYNOPSIS
-    GAPI_KEY=**** ggdrive.sh [-egtuhv] <csvfile> #-h or --help for more details
- 
- DESCRIPTION
-    #Download google drive file exports, eg gdocs -> pdf
+Environoment variables:
+   G_API_KEY           REQUIRED Google Cloud API Key with access to Google Drive API
 
- ARGUMENTS
-    $1 <csvfile>      #Leave blank for noop (add -e for lib usage)
-                      #Row format: gdrive_file_id,mime_type,dest,min_size\n                 
+Arguments:
+   [csv_file]          Path/to/file.csv. Leave blank for NOOP.
 
- OPTIONS
-    -e, --export      #Export the functions for your own use
-    -g, --gapi_url    #Specify different endpoint of the google drive api
-    -t, --tempfile    #If you want to be particular about the tempfile
-    -u, --user_agent  #I don't think Google actually cares, but hey
+Flags:
+   [-e, --export]      Export functions. Use w/o [csv_file] for custom handling
+   [-v, --version]     Output version info. Long form provides more metadata
+   [-h, --help]        Output help. Long form provides more info, examples
 
-    -h, --help        #Print this help
-    -v, --version     #Print script information
+Options
+   #Specify endpoint of the google drive api
+   [-g, --g_api] <arg> {'https://www.googleapis.com/drive/v2'}
 
- #CURL USAGE - if it gets popular rate limiting, but that's not a concern now
-    CSVFILE=gdrive_files.csv && GGTEMP=$(mktemp -t ggdriveXXXXXXXXXX.sh)\
-      && curl -s -L https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw\
-      > $GGTEMP && bash $GGTEMP $CSVFILE && echo $GGTEMP && rm $GGTEMP
+   #If you want to be particular about the temporary file              
+   [-t, --tempfile] <arg> {tempfile}
+
+   #I don't think Google actually cares, but hey
+   [-u, --user_agent] <arg> {'gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9'}
 ```
