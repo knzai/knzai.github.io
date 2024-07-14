@@ -2,6 +2,8 @@
 title = "Cleaning Up Web Published Google Docs"
 description = "Parsing content with Rust regexes in Zola"
 date = 2024-07-06
+[extra]
+image = "gdocs_header.png"
 +++
 As you probably know, Google Docs "Publish to Web" settings doesn't provide the cleanest html, not to mention the giant header it tacks on.
 
