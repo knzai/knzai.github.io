@@ -1,6 +1,6 @@
 +++
-title = "Google Drive File exporter bash script"
-description = "Parses a csv of files to export from Google Drive APIs"
+title = "ggdrive.sh"
+description = "Bash script to export files from Google Drive, eg gdoc -> pdf"
 aliases = ["/ggdrive"]
 +++
 

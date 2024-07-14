@@ -1,4 +1,4 @@
-<div class="post {{page | get(key="slug", default=page.title) }}">
+<div class="post {{page | get(key="slug", default=page.title) | safe }}">
   {% set custom_title = page.extra | get(key="custom_title", default="") %}
   {% include "partials/_page_title.html" %}
   {% if page.date %}<span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}

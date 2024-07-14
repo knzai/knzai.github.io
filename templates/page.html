@@ -1,6 +1,11 @@
 {% extends "layouts/base.html" %}
-
+{% block open_graph %}
+	<meta property="og:image" content="{{page.extra | get(key="image", default=config.extra.default_image)}}" />
+	<meta property="og:title" content="Kenzi Connor: {{ page.title }}">
+	<meta property="og:description" content="{{ page.description }}">
+{% endblock open_graph %}
+{%- block title -%}{{- page.title -}}{%- endblock title -%}
 {% block content %}
-{% include "partials/_breadcrumb.html" %}
-{% include "partials/_page.html" %}
+	{% include "partials/_breadcrumb.html" %}
+	{% include "partials/_page.html" %}
 {% endblock content %}

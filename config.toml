@@ -12,6 +12,7 @@ feed_filenames = ["atom.xml", "rss.xml"]
 highlight_code = true
 
 [extra]
+default_image = "/assets/images/me.jpg"
 color_theme = "theme-base-08"
 sidebar_reverse = true
 sidebar_links = [

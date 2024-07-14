@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-    <head>      
+    <head>
+      <title>{{- config.title -}}: {% block title %}actual human{%- endblock title -%}</title>
       {% include "layouts/_head.html" %}
       {% block extra_head %}
       {% endblock extra_head %}

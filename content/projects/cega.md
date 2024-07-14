@@ -2,6 +2,8 @@
 title = "cega"
 description = "CGA/EGA graphics binary file parsing with terminal art preview and png/gif/etc output"
 aliases=["/cega"]
+[extra]
+image="/projects/cega.png"
 +++
 
 - Language/Platform: Rust
