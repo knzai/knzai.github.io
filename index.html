@@ -21,15 +21,20 @@
       <link rel="alternate" type="application/rss+xml" title="Kenzi Connor RSS Feed" href="https://knz.ai/rss.xml" />
       
       
+      
+        <meta property="og:image" content="/assets/images/me.jpg" />
+      
     </head>
     <body class="theme-base-08 layout-reverse">
       <div class="sidebar">
         
           <div class="container sidebar-sticky">
   <ul class="sidebar-nav"><li class="sidebar-nav-item">
+      <a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;" class=>posts</a> - <a class="scroll-link" href="#posts">#</a>
+    </li><li class="sidebar-nav-item">
       <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;" class=>projects</a> - <a class="scroll-link" href="#projects">#</a>
     </li><li class="sidebar-nav-item">
-      <a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;" class=>posts</a> - <a class="scroll-link" href="#posts">#</a>
+      <a href="https:&#x2F;&#x2F;knz.ai&#x2F;about&#x2F;" class=>about</a> - <a class="scroll-link" href="#about">#</a>
     </li>
   <li class="sidebar-nav-item">
       <a href="https:&#x2F;&#x2F;knz.ai&#x2F;resume&#x2F;" class=>resume</a> - <a class="scroll-link" href="#resume">#</a>
@@ -60,116 +65,6 @@
       </div>
       <div class="content container">
         
-<div class="breadcrumb-container">
-    
-    
-      
-      
-        knz.ai
-      
-      <span class="breadcrumb-separator">></span>
-    
-    
-    
-      <a class="breadcrumb-path" href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;" id="projects">projects</a>
-    
-</div>
-
-<div class="posts">
-  
-  
-    
-      
-      <div class="post ggdrive">
-  
-  
-  <h2 class="post-title">
-    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;ggdrive&#x2F;" id="Google Drive File exporter bash script">Google Drive File exporter bash script</a>: <span class="post-description">Parses a csv of files to export from Google Drive APIs</span>
-  </h2>
-
-  
-  
-    <ul>
-<li>Language/Platform: bash</li>
-<li>Github Repository: <a href="https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9">gist</a></li>
-</ul>
-<p>Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./ggdrive.sh -h
-</span><span>
-</span><span> </span><span style="color:#bf616a;">SYNOPSIS
-</span><span>    </span><span style="color:#bf616a;">GAPI_KEY</span><span>=**** </span><span style="color:#bf616a;">ggdrive.sh </span><span style="color:#b48ead;">[</span><span>-egtuhv</span><span style="color:#b48ead;">] </span><span>&lt;csvfile&gt; </span><span style="color:#65737e;">#-h or --help for more details
-</span><span> 
-</span><span> </span><span style="color:#bf616a;">DESCRIPTION
-</span><span>    </span><span style="color:#65737e;">#Download google drive file exports, eg gdocs -&gt; pdf
-</span><span>
-</span><span> </span><span style="color:#bf616a;">ARGUMENTS
-</span><span>    $</span><span style="color:#bf616a;">1 </span><span>&lt;csvfile&gt;      </span><span style="color:#65737e;">#Leave blank for noop (add -e for lib usage)
-</span><span>                      </span><span style="color:#65737e;">#Row format: gdrive_file_id,mime_type,dest,min_size\n                 
-</span><span>
-</span><span> </span><span style="color:#bf616a;">OPTIONS
-</span><span>    </span><span style="color:#bf616a;">-e, --export      </span><span style="color:#65737e;">#Export the functions for your own use
-</span><span>    </span><span style="color:#bf616a;">-g, --gapi_url    </span><span style="color:#65737e;">#Specify different endpoint of the google drive api
-</span><span>    </span><span style="color:#bf616a;">-t, --tempfile    </span><span style="color:#65737e;">#If you want to be particular about the tempfile
-</span><span>    </span><span style="color:#bf616a;">-u, --user_agent  </span><span style="color:#65737e;">#I don&#39;t think Google actually cares, but hey
-</span><span>
-</span><span>    </span><span style="color:#bf616a;">-h, --help        </span><span style="color:#65737e;">#Print this help
-</span><span>    </span><span style="color:#bf616a;">-v, --version     </span><span style="color:#65737e;">#Print script information
-</span><span>
-</span><span> </span><span style="color:#65737e;">#CURL USAGE - if it gets popular rate limiting, but that&#39;s not a concern now
-</span><span>    </span><span style="color:#bf616a;">CSVFILE</span><span>=</span><span style="color:#a3be8c;">gdrive_files.csv </span><span>&amp;&amp; </span><span style="color:#bf616a;">GGTEMP</span><span>=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">mktemp -t</span><span style="color:#a3be8c;"> ggdriveXXXXXXXXXX.sh)\
-</span><span>      &amp;&amp; </span><span style="color:#bf616a;">curl -s -L</span><span> https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw\
-</span><span>      &gt; $</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">bash </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>$</span><span style="color:#bf616a;">CSVFILE </span><span>&amp;&amp; </span><span style="color:#96b5b4;">echo </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">rm </span><span>$</span><span style="color:#bf616a;">GGTEMP
-</span></code></pre>
-
-  
-</div>
-    
-      
-      <div class="post cega">
-  
-  
-  <h2 class="post-title">
-    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;cega&#x2F;" id="cega">cega</a>: <span class="post-description">CGA/EGA graphics binary file parsing with terminal art preview and png/gif/etc output</span>
-  </h2>
-
-  
-  
-    <ul>
-<li>Language/Platform: Rust</li>
-<li>Github Repository: <a href="https://github.com/knzai/cega">knzai/cega</a></li>
-<li>Crate Registry: <a href="https://crates.io/crates/cega">crates/cega</a></li>
-</ul>
-<p>Full documentation on the GH repo README</p>
-<p><img src="/projects/cega.png" alt="image" /></p>
-
-  
-</div>
-    
-      
-      <div class="post zolaction">
-  
-  
-  <h2 class="post-title">
-    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;zolaction&#x2F;" id="zolaction">zolaction</a>: <span class="post-description">A GH Action that install, checks, builds, and deploys a zola site</span>
-  </h2>
-
-  
-  
-    <ul>
-<li>Language/Platform: Github Actions (bash and yml)</li>
-<li>Github Repository: <a href="https://github.com/zolacti/on">zolacti/on</a></li>
-<li>Github Marketplace: <a href="https://github.com/marketplace/actions/zola-action">actions/zola-action</a></li>
-</ul>
-<p>A <a href="https://docs.github.com/en/actions/creating-actions/creating-a-composite-action">composite action</a> that does an idempotent install of <a href="https://www.getzola.org/">zola</a> and calls its <a href="https://www.getzola.org/documentation/getting-started/cli-usage/">CLI</a> to build and optionally deploy a site to Github Pages. Full documentation on the GH repo README</p>
-<p><img src="/projects/zolaction.png" alt="image" /></p>
-
-  
-</div>
-    
-  
-
-</div>
-<hr />
 <div class="breadcrumb-container">
     
     
@@ -250,6 +145,152 @@
     
     
     
+      <a class="breadcrumb-path" href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;" id="projects">projects</a>
+    
+</div>
+
+<div class="posts">
+  
+  
+    
+      
+      <div class="post ggdrive">
+  
+  
+  <h2 class="post-title">
+    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;ggdrive&#x2F;" id="Google Drive File exporter bash script">Google Drive File exporter bash script</a>: <span class="post-description">Parses a csv of files to export from Google Drive APIs</span>
+  </h2>
+
+  
+  
+    <ul>
+<li>Language/Platform: bash</li>
+<li>Github Repository: <a href="https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9">gist</a></li>
+</ul>
+<p>Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">Name:</span><span> ggdrive.sh (1.2.0)
+</span><span style="color:#bf616a;">Description:</span><span> Download google drive file exports, eg gdocs -&gt; pdf
+</span><span style="color:#bf616a;">Usage: 
+</span><span style="color:#a3be8c;">&lt;G_API_KEY=XXXX</span><span>&gt; ./ggdrive.sh </span><span style="color:#bf616a;">[-h, --help</span><span>] </span><span style="color:#b48ead;">[</span><span>-v</span><span style="color:#b48ead;">] [</span><span>-e</span><span style="color:#b48ead;">] [</span><span>-g &lt;g_api&gt;</span><span style="color:#b48ead;">] [</span><span>-t &lt;tempfile&gt;</span><span style="color:#b48ead;">] [</span><span>-u &lt;user_agent&gt;</span><span style="color:#b48ead;">] [</span><span>csv_file</span><span style="color:#b48ead;">]
+</span><span>
+</span><span style="color:#bf616a;">Environoment</span><span> variables:
+</span><span>   </span><span style="color:#bf616a;">G_API_KEY</span><span>           REQUIRED Google Cloud API Key with access to Google Drive API
+</span><span>
+</span><span style="color:#bf616a;">Arguments:
+</span><span>   </span><span style="color:#bf616a;">[csv_file]</span><span>          Path/to/file.csv. Leave blank for NOOP.
+</span><span>
+</span><span style="color:#bf616a;">Flags:
+</span><span>   </span><span style="color:#bf616a;">[-e, --export</span><span>]      Export functions. Use w/o </span><span style="color:#b48ead;">[</span><span>csv_file</span><span style="color:#b48ead;">]</span><span> for custom handling
+</span><span>   </span><span style="color:#bf616a;">[-v, --version</span><span>]     Output version info. Long form provides more metadata
+</span><span>   </span><span style="color:#bf616a;">[-h, --help</span><span>]        Output help. Long form provides more info, examples
+</span><span>
+</span><span style="color:#bf616a;">Options
+</span><span>   </span><span style="color:#65737e;">#Specify endpoint of the google drive api
+</span><span>   </span><span style="color:#bf616a;">[-g, --g_api</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">https://www.googleapis.com/drive/v2</span><span>&#39;}
+</span><span>
+</span><span>   </span><span style="color:#65737e;">#If you want to be particular about the temporary file              
+</span><span>   </span><span style="color:#bf616a;">[-t, --tempfile</span><span>] &lt;arg&gt; {tempfile}
+</span><span>
+</span><span>   </span><span style="color:#65737e;">#I don&#39;t think Google actually cares, but hey
+</span><span>   </span><span style="color:#bf616a;">[-u, --user_agent</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9</span><span>&#39;}
+</span></code></pre>
+
+  
+</div>
+    
+      
+      <div class="post zolaction">
+  
+  
+  <h2 class="post-title">
+    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;zolaction&#x2F;" id="zolaction">zolaction</a>: <span class="post-description">A GH Action that install, checks, builds, and deploys a zola site</span>
+  </h2>
+
+  
+  
+    <ul>
+<li>Language/Platform: Github Actions (bash and yml)</li>
+<li>Github Repository: <a href="https://github.com/zolacti/on">zolacti/on</a></li>
+<li>Github Marketplace: <a href="https://github.com/marketplace/actions/zola-action">actions/zola-action</a></li>
+</ul>
+<p>A <a href="https://docs.github.com/en/actions/creating-actions/creating-a-composite-action">composite action</a> that does an idempotent install of <a href="https://www.getzola.org/">zola</a> and calls its <a href="https://www.getzola.org/documentation/getting-started/cli-usage/">CLI</a> to build and optionally deploy a site to Github Pages. Full documentation on the GH repo README</p>
+<p><img src="/projects/zolaction.png" alt="image" /></p>
+
+  
+</div>
+    
+      
+      <div class="post cega">
+  
+  
+  <h2 class="post-title">
+    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;cega&#x2F;" id="cega">cega</a>: <span class="post-description">CGA/EGA graphics binary file parsing with terminal art preview and png/gif/etc output</span>
+  </h2>
+
+  
+  
+    <ul>
+<li>Language/Platform: Rust</li>
+<li>Github Repository: <a href="https://github.com/knzai/cega">knzai/cega</a></li>
+<li>Crate Registry: <a href="https://crates.io/crates/cega">crates/cega</a></li>
+</ul>
+<p>Full documentation on the GH repo README</p>
+<p><img src="/projects/cega.png" alt="image" /></p>
+
+  
+</div>
+    
+  
+
+</div>
+<hr />
+<div class="breadcrumb-container">
+    
+    
+      
+      
+        knz.ai
+      
+      <span class="breadcrumb-separator">></span>
+    
+    
+    
+      <a class="breadcrumb-path" href="https:&#x2F;&#x2F;knz.ai&#x2F;about&#x2F;" id="about">about</a>
+    
+</div>
+
+<div class="posts">
+  
+  
+    
+    <div class="post about">
+  
+  
+  
+  
+    <p><img src="https://knz.ai/processed_images/me.6644e9aa3ac330a0.jpg"/>With over 20 years of experience in software engineering and management, I have expertise in various high-compliance sectors such as fin/ed/health/gov tech and leading the development of high-throughput, low-latency, low-downtime systems. I particularly enjoy management of cross-functional teams and cross-team collabs.</p>
+<p>As a queer trans woman, I strongly believe that diverse teams yield better results. In my leadership role, I strive to bring unique perspectives and prioritize creating a safe, communicative environment while also setting high team expectations. I believe in servant leadership and empowering my team to make the right decisions. I have a track record of addressing performance issues without resorting to punitive measures (an rare skill in tech), and I work hard to earn loyalty, which significantly improves team cohesion and retention.</p>
+<p>As an engineer, I am a T-shaped polyglot: I have worked with almost every widely used web production language of the last 20 years and have particularly been working with Ruby on Rails for almost that entire time. My current other favorites include Rust (supplmented by by bash and GitHub Actions) for dealing with 80s game file formats: eventually I plan to rebuild an engine for Ultima 1-3. I'm also one of those weirdos who actually likes maintaining and improving others code, infrastructure and CI/CD pipelines.</p>
+<p>In addition to my professional background, I am an autodidact with a passion for learning, which began at a young age when I taught myself to read by 2 1/2 years old from <a href="https://en.wikipedia.org/wiki/Serendipity_(book_series)">Serendipity books</a> author read-alongs, and to program at 8 years old from <a href="https://en.wikipedia.org/wiki/Type-in_program">type in programs in old computing magazines</a>.</p>
+<p>I was also a competitive mogul skiier with ambitions of the Olympics and hoped to save the world with nanotechnology (the 90s were an ambitious era), before my O-Chem course foiled that dream and returned to computing. My diverse interests have led me on a unique journey that has contributed to my well-rounded perspective in both technology and beyond.</p>
+
+  
+</div>
+  
+
+</div>
+<hr />
+<div class="breadcrumb-container">
+    
+    
+      
+      
+        knz.ai
+      
+      <span class="breadcrumb-separator">></span>
+    
+    
+    
       <a class="breadcrumb-path" href="https:&#x2F;&#x2F;knz.ai&#x2F;resume&#x2F;" id="resume">resume</a>
     
 </div>
@@ -265,7 +306,7 @@
 
   
   
-     <style type="text/css">@import url(https://themes.googleusercontent.com/fonts/css?kit=RFda8w1V0eDZheqfcyQ4EHaYiPAslbK81rCSwRSnoRqS4b96hY1-3VJ9ZmMXwl4S);li.li-bullet-0:before{margin-left:-4.5pt;white-space:nowrap;display:inline-block;min-width:4.5pt} .doc-content ol{margin:0;padding:0} .doc-content table td,table th{padding:0} .doc-content .c35{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:421.5pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c10{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:544.5pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c31{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:123pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c0{margin-left:4.5pt;padding-top:7pt;text-indent:-4.5pt;padding-bottom:0pt;line-height:1.0;page-break-after:avoid;text-align:left;margin-right:21pt} .doc-content .c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Roboto";font-style:normal} .doc-content .c2{color:#0b5394;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Roboto";font-style:normal} .doc-content .c9{color:#0b5394;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Roboto";font-style:normal} .doc-content .c4{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:"Roboto";font-style:normal} .doc-content .c21{color:#000000;font-weight:700;vertical-align:baseline;font-size:9pt;font-family:"Roboto";font-style:normal} .doc-content .c40{padding-top:0pt;padding-bottom:10pt;line-height:1.15;text-align:left;margin-right:39pt} .doc-content .c41{color:#000000;vertical-align:baseline;font-size:11pt;font-family:"Roboto";font-style:normal} .doc-content .c24{padding-top:5pt;padding-bottom:0pt;line-height:1.0;page-break-after:avoid;text-align:left} .doc-content .c37{color:#000000;font-weight:400;vertical-align:baseline;font-family:"Roboto";font-style:normal} .doc-content .c20{vertical-align:baseline;font-size:14pt;font-family:"Roboto";font-style:normal} .doc-content .c28{vertical-align:baseline;font-size:13pt;font-family:"Roboto";font-style:normal} .doc-content .c33{border-spacing:0;border-collapse:collapse;margin-right:auto} .doc-content .c39{color:#000000;vertical-align:baseline;font-size:36pt;font-style:normal} .doc-content .c17{vertical-align:baseline;font-size:15pt;font-family:"Roboto";font-style:normal} .doc-content .c19{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;font-weight:700;text-decoration:underline} .doc-content .c42{padding-top:10pt;padding-bottom:0pt;line-height:1.0;text-align:left} .doc-content .c6{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left} .doc-content .c11{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline} .doc-content .c36{padding-top:0pt;padding-bottom:10pt;line-height:1.0;text-align:left} .doc-content .c23{background-color:#ffffff;max-width:525.6pt;padding:28.8pt 43.2pt 0pt 43.2pt} .doc-content .c29{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;text-decoration:underline} .doc-content .c3{font-size:10pt;font-family:"Roboto";font-weight:400} .doc-content .c38{font-weight:400;font-family:"Merriweather"} .doc-content .c13{margin-left:18pt;padding-left:-13.5pt} .doc-content .c26{background-color:#ffffff;font-size:10.5pt} .doc-content .c14{margin-left:4.5pt;text-indent:-4.5pt} .doc-content .c27{color:inherit;text-decoration:inherit} .doc-content .c8{font-size:6pt;text-decoration:none} .doc-content .c18{color:#000000;font-size:6pt} .doc-content .c22{margin-left:7.2pt;text-indent:-7.2pt} .doc-content .c34{padding:0;margin:0} .doc-content .c16{color:#0b5394;font-weight:700} .doc-content .c32{height:0pt} .doc-content .c30{page-break-after:avoid} .doc-content .c15{height:10pt} .doc-content .c5{height:229.5pt} .doc-content .c7{margin-right:21pt} .doc-content .c25{font-weight:700} .doc-content .c12{text-decoration:none} .doc-content .c43{color:#0b5394} .doc-content .title{padding-top:0pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content .subtitle{padding-top:0pt;color:#000000;font-size:9pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content li{color:#000000;font-size:10pt;font-family:"Roboto"} .doc-content p{margin:0;color:#000000;font-size:10pt;font-family:"Roboto"} .doc-content h1{padding-top:10pt;color:#0b5394;font-weight:700;font-size:13pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content h2{padding-top:7pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h3{padding-top:5pt;color:#0b5394;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h4{padding-top:7pt;color:#0b5394;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h5{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h6{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.0;page-break-after:avoid;font-style:italic;text-align:left} .doc-content </style><div class="c23 doc-content"><div class="gdoc-header"><p class="c6 c14 title" id="h.rpllnf848yq9"><span class="c38">Kenzi Connor</span></p><h4 class="c0" id="h.xjrwwf7qmwmw"><span>Staff Software Engineer - VP Engineering - Director of Engineering - CEO &amp; CTO</span></h4><hr><p class="c15 c36"><span class="c1"></span></p><a id="t.da610da04d4805ac0a46dd8430fcbf2f687fafd6"></a><a id="t.0"></a></div><table class="c33"><tr class="c32"><td class="c10" colspan="2" rowspan="1"><h1 class="c6 c7 c14" id="h.hpbcrex2a2ry"><span class="c28 c16 c12">CLIENTS</span></h1><p class="c40"><span class="c25">American Cancer Society   ·   One Medical / Amazon   ·   Bank of New York Mellon   ·   Commvault   ·   Fastly   · Gusto   ·   Public Library of Science   ·   World Health Organization   ·   Vital Strategies   ·   Key Fortune 50s </span></p></td></tr><tr class="c5"><td class="c35" colspan="1" rowspan="1"><h1 class="c6 c14 c7" id="h.9szobleufb2u"><span>SUMMARY</span><span class="c18">        </span><span>20+ Years</span></h1><p class="c6"><span class="c1">Software engineering; engineering management; executive leadership</span></p><p class="c6 c7"><span class="c1">High-compliance spaces: fin/edu/health/gov tech</span></p><p class="c6 c7"><span class="c1">High-throughput, low-latency, low-downtime systems</span></p><p class="c6 c7"><span>Management of cross-functional teams and cross-team collabs</span></p><p class="c6"><span class="c1">Resilience in high-pressure situations: rush jobs &amp; very high-profile clients</span></p><p class="c6 c7"><span>Management of client relationships and all aspects of businesses</span></p><h1 class="c42 c14 c7" id="h.y7d3xdxnr44m"><span class="c16 c12 c28">EXPERIENCE</span></h1><h2 class="c6 c14 c30 c7" id="h.rfgvkg2ifhfd"><span class="c29">CEO &amp; CTO </span><span class="c12">- Cloud City Development</span><span class="c8">        </span><span class="c43">2010 - NOW</span></h2><p class="c6 c7"><span class="c1">​​Founded and grew 35 person software design + development firm</span></p><p class="c6 c7"><span>Principal Engineer and CTO</span><span class="c1"> consultant for clients</span></p><p class="c6 c7"><span class="c3">Built teams that IPO’ed, got acquired, and </span><span>secured </span><span class="c3">$100s of millions </span><span>in</span><span class="c1"> funding</span></p><h2 class="c0" id="h.29h9tc9myslc"><span class="c19">CTO &amp; Advisor</span><span class="c25 c12"> - </span><span>OKCupid Labs for Match.com</span><span class="c12">        </span><span class="c16 c12">2011 - 2013</span></h2><p class="c6 c7"><span class="c3">Built team from 0 to mid 30</span><span> headcount</span><span class="c3"> within 7 month</span><span>s initial engagement</span></p><p class="c6 c7"><span class="c1">Weekly strategy sessions for dozens of properties, with tens of millions of users</span></p><p class="c6 c7"><span class="c3">Managed </span><span>full</span><span class="c1"> redesign and re-architecture of the largest of these properties</span></p><p class="c6 c7"><span class="c3">Established </span><span>effective</span><span class="c3"> engineering team that could continue to deliver after </span><span>I left</span></p><h2 class="c0" id="h.rfi6q2d9iumk"><span class="c19">Senior </span><span class="c19">Software Engineer</span><span class="c25 c12"> - Pivotal Labs</span><span class="c12">        </span><span class="c16 c12">2010 - 2011</span></h2><p class="c6"><span class="c1">Emergency jill-of-all-trades across both complex frontend and high-scale backend</span></p><p class="c6"><span class="c1">Ramped up quickly on 4 projects in 7 months, contributing effectively immediately</span></p><p class="c6"><span class="c1">Built developer infrastructure for high-scale, no-downtime migration from VPS to AWS</span></p><p class="c6"><span class="c1">Debugged mass-scale throughput/IO concurrency limitations</span></p><h2 class="c0" id="h.g4ucg0t92eed"><span class="c29">Senior Software Engineer</span><span> - Yieldbuild        </span><span class="c9">2007 - 2010</span></h2><p class="c6 c7"><span class="c3">Co-authored nginx &amp; </span><span>R</span><span class="c1">ack handlers w/ billions of monthly uniques</span></p><p class="c6 c7"><span>Built</span><span class="c3"> </span><span>primary </span><span class="c3">report</span><span>ing/data</span><span class="c3"> site</span><span> with dynamic data-viz</span><span class="c3"> in </span><span>Flex</span></p><p class="c6 c7"><span>F</span><span class="c3">ramework</span><span> and infrastructure </span><span class="c3">updates</span><span> </span><span class="c1">with a zero-downtime requirement</span></p><p class="c6 c7"><span class="c3">Optimized payloads of .js to within individual IP packet size constraints</span></p><h2 class="c0" id="h.lhlw0xilj6e9"><span class="c19">CEO &amp; CTO</span><span class="c25 c12"> - InfoSauce        </span><span class="c16 c12">2003 - 2007</span></h2><p class="c6 c7"><span class="c1">​​Co-founded and grew 10 person software design + development firm</span></p><p class="c6 c7"><span class="c1">Principal Engineer and CTO consultant for clients</span></p><p class="c6 c7"><span class="c1">Continued to develop high-profile (NDA) banking clients </span></p><h2 class="c0" id="h.a969m8rb2eyh"><span class="c19">Lead Developer</span><span class="c25 c12"> - BridgeLine Software</span><span class="c8">        </span><span class="c12 c16">2002 - 2003</span></h2><p class="c6 c7"><span>H</span><span class="c1">ead dev for Wall Street/financial work with global roll-outs</span></p><h2 class="c0" id="h.25vnc0jdczy5"><span class="c19">Developer</span><span class="c12 c25"> - Hall Kinion</span><span class="c8">        </span><span class="c16 c12">2001 - 2002</span></h2><p class="c6 c7"><span class="c26 c12 c37">Rebuilt mortgage services app from Access DB to current web frameworks</span></p><h2 class="c0" id="h.lagr5hivylpj"><span class="c29">Technology Production Assistant </span><span>- University of Utah        </span><span class="c9">2000 - 2001</span></h2><p class="c6 c7"><span class="c26">Built technology assisted curriculum (video, multimedia, online) for professors</span></p><h1 class="c14 c7 c42" id="h.y47gkvhij2y2"><span>EDUCATION</span><span class="c18">        </span></h1><h2 class="c6 c14 c7 c30" id="h.3knziuql1ek5"><span class="c19">Presidential Scholar full-ride</span><span class="c25 c12"> - University of Utah</span><span class="c25 c12 c41">        </span></h2><p class="c6 c7"><span class="c1">Honors major in CS; minors in math, physics, chemistry (one class left)</span></p><p class="c6 c7"><span class="c1">Could have attended anywhere; was trying to make World Cup in Freestyle Skiing</span></p><p class="c6 c7"><span class="c1">Dropped out to found a tech company</span></p></td><td class="c31" colspan="1" rowspan="1"><h3 class="c6 c30" id="h.7j8zpq2r5msy-1"><span class="c9">TECHNICAL</span></h3><p class="c6 subtitle" id="h.wtepv1gt77f5"><span class="c12 c21">Rust, Ruby, Javascript</span></p><ul class="c34 lst-kix_n2leh2ezqw7n-0 start"><li class="c6 c13 subtitle li-bullet-0" id="h.4jdyssvd7cge"><span class="c4">Technical Architecture</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.wmrg1c7rch8p"><span class="c4">Infra/CI+CD/DevOps</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.xkbks4ktqhpi"><span class="c4">Git, Bash/zsh, CLI, Posix</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.n5jxomfsns6w"><span class="c4">GitHub Actions, chef</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.aetfetkjx4mo"><span class="c4">Agile / XP / TDD</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.trenayyfinzx"><span class="c4">A/B Testing</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.qrpnw7rqow2l"><span class="c4">PostgreSQL, MySQL, etc</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.q67yaq1hjxkr"><span class="c4">HBase/HDFS, MongoDB, Redis, Memcache, CouchDB</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.k2h3pbdn7o70"><span class="c4">Ruby on Rails, Node.js</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.v8yvnuhegtbh"><span class="c4">HTML, CSS, XML, SCSS</span></li></ul><p class="c6 c22 subtitle" id="h.6tk9dghu8r2y"><span class="c25">Previously</span><span class="c4">:<br>C,  C++,  Lisp, C#, Java, Python, Flash, Flex, ActionScript, ASP, VBScript, VB COM, MSSQL</span></p><h3 class="c24" id="h.iswrqopozzv1"><span class="c9">OTHER SKILLS</span></h3><p class="c6 subtitle" id="h.3p6kv6i9c78s"><span class="c4">Executive Leadership</span></p><p class="c6 subtitle" id="h.y5yer98lau39"><span class="c4">Engineering Management</span></p><p class="c6 subtitle" id="h.lw84wpd8hva0"><span class="c4">Hiring / Retention</span></p><p class="c6 subtitle" id="h.dfl58pg3hcj8"><span>Consultative Sales </span></p><h3 class="c24" id="h.1f8rb3ro4hqc"><span class="c9">CURRENT FOSS</span></h3><p class="c6 c22 subtitle" id="h.hibw1w1clz5y"><span class="c11"><a class="c27" href="https://knz.ai/cega">knz.ai/cega</a></span><span><br></span><span class="c4">Rust library for parsing CGA/EGA graphics binaries</span></p><p class="c6 c22 subtitle" id="h.vy10a8f6yeol"><span class="c11"><a class="c27" href="https://knz.ai/zolaction">knz.ai/zolaction</a></span><span><br></span><span class="c4">Github Action to deploy Rust static site gen to GH Pages</span></p><h3 class="c24" id="h.tuxh7mwdaxox"><span class="c9">MENTORSHIP</span></h3><p class="c6 subtitle" id="h.n9koaybu32la"><span class="c4">Dev Bootcamp</span></p><p class="c6 subtitle" id="h.fbo5qxwu86ms"><span class="c4">Mills College</span></p><p class="c6 subtitle" id="h.s2ox737ltine"><span class="c4">MIT MakerHealth</span></p><p class="c6 subtitle" id="h.35a91qpfumht"><span class="c4">ProInspire</span></p><p class="c6 subtitle" id="h.x8mf3avab1s2"><span class="c4">Rails Bridge </span></p><p class="c6 subtitle" id="h.bfwhjrlw3mz3"><span class="c4">Rails Girls</span></p><h3 class="c24" id="h.cxxkes25b26"><span class="c9">SPEAKING</span></h3><p class="c6 subtitle" id="h.zacil87x794c"><span class="c4">RubyConf</span></p><p class="c6 subtitle" id="h.l6yrgnyu8euv"><span class="c4">Madison Ruby</span></p><h3 class="c24" id="h.7vpof3shb461"><span class="c9">LINKS &amp; CONTACT</span></h3><p class="c6 subtitle" id="h.b4gjc6hqdwpd"><span class="c11"><a class="c27" href="http://linkedin.com/in/knzai">linkedin.com/in/knzai</a></span></p><p class="c6 subtitle" id="h.hmthhnjyls54"><span class="c11"><a class="c27" href="http://twitter.com/knzconnor">twitter.com/knzconnor</a></span></p><p class="c6 subtitle" id="h.uq0twnkgvaa"><span class="c11"><a class="c27" href="http://github.com/knzai">github.com/knzai</a></span></p><p class="c6 subtitle" id="h.jgsdnbct1snf"><span class="c11"><a class="c27" href="https://knz.ai/resume/">knz.ai/resume/</a></span></p><p class="c6 subtitle" id="h.tz7bgxcgar1a"><span class="c11"><a class="c27" href="mailto:resume@knz.ai">resume@knz.ai</a></span></p><p class="c6 subtitle" id="h.73smk22uuy0s"><span>Oakland, C</span><span>A</span><span class="c4">, 94602</span></p><h3 class="c24" id="h.35ahu7khp4li"><span class="c9">PURSUITS inc. FORMER</span></h3><ul class="c34 lst-kix_cl2h265qjup8-0 start"><li class="c6 c13 subtitle li-bullet-0" id="h.smk6a2y2qg48"><span class="c4">#36 in US: Dual Mogul Skiing</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.iuk50k950i67"><span class="c4">Wing Chun (Kung Fu)</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.yo5bwjkog5zk"><span class="c4">Circus Arts (straps and acro)</span></li><li class="c6 c13 subtitle li-bullet-0" id="h.vxsynkkqxlm6"><span class="c4">#1-2 weekly 🌎 HL2 Oz DM</span></li></ul></td></tr></table><p class="c6 c15"><span class="c1"></span></p></div>    
+     <style type="text/css">@import url(https://themes.googleusercontent.com/fonts/css?kit=RFda8w1V0eDZheqfcyQ4EHaYiPAslbK81rCSwRSnoRqS4b96hY1-3VJ9ZmMXwl4S);li.li-bullet-0:before{margin-left:-4.5pt;white-space:nowrap;display:inline-block;min-width:4.5pt} .doc-content ol{margin:0;padding:0} .doc-content table td,table th{padding:0} .doc-content .c14{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:421.5pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c34{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:123pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c33{border-right-style:solid;border-bottom-color:#ff0000;border-top-width:0pt;border-right-width:0pt;border-left-color:#ff0000;vertical-align:top;border-right-color:#ff0000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:544.5pt;border-top-color:#ff0000;border-bottom-style:solid} .doc-content .c0{margin-left:4.5pt;padding-top:7pt;text-indent:-4.5pt;padding-bottom:0pt;line-height:1.0;page-break-after:avoid;text-align:left;margin-right:21pt} .doc-content .c12{background-color:#ffffff;color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10.5pt;font-family:"Roboto";font-style:normal} .doc-content .c22{margin-left:4.5pt;padding-top:10pt;text-indent:-4.5pt;padding-bottom:0pt;line-height:1.0;text-align:left;margin-right:21pt} .doc-content .c3{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:"Roboto";font-style:normal} .doc-content .c5{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Roboto";font-style:normal} .doc-content .c4{margin-left:18pt;padding-top:0pt;padding-left:-13.5pt;padding-bottom:0pt;line-height:1.0;text-align:left} .doc-content .c32{padding-top:0pt;padding-bottom:10pt;line-height:1.15;text-align:left;margin-right:39pt} .doc-content .c18{padding-top:5pt;padding-bottom:0pt;line-height:1.0;page-break-after:avoid;text-align:left} .doc-content .c7{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;margin-right:21pt} .doc-content .c6{vertical-align:baseline;font-size:12pt;font-family:"Roboto";font-style:normal} .doc-content .c37{border-spacing:0;border-collapse:collapse;margin-right:auto} .doc-content .c31{vertical-align:baseline;font-size:14pt;font-family:"Roboto";font-style:normal} .doc-content .c29{vertical-align:baseline;font-size:9pt;font-family:"Roboto";font-style:normal} .doc-content .c39{vertical-align:baseline;font-size:15pt;font-family:"Roboto";font-style:normal} .doc-content .c20{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left} .doc-content .c2{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline} .doc-content .c16{vertical-align:baseline;font-size:13pt;font-family:"Roboto";font-style:normal} .doc-content .c35{padding-top:0pt;padding-bottom:10pt;line-height:1.0;text-align:left} .doc-content .c10{vertical-align:baseline;font-size:11pt;font-family:"Roboto";font-style:normal} .doc-content .c11{font-size:10pt;font-family:"Roboto";font-weight:400} .doc-content .c41{vertical-align:baseline;font-size:36pt;font-style:normal} .doc-content .c13{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;text-decoration:underline} .doc-content .c1{color:#0b5394;font-weight:700;text-decoration:none} .doc-content .c9{background-color:#ffffff;max-width:525.6pt;padding:28.8pt 43.2pt 0pt 43.2pt} .doc-content .c15{color:inherit;text-decoration:inherit} .doc-content .c26{background-color:#ffffff;font-size:10.5pt} .doc-content .c25{margin-left:7.2pt;text-indent:-7.2pt} .doc-content .c38{font-weight:400;font-family:"Merriweather"} .doc-content .c23{margin-left:4.5pt;text-indent:-4.5pt} .doc-content .c36{padding:0;margin:0} .doc-content .c8{color:#0b5394} .doc-content .c17{font-weight:700} .doc-content .c21{font-size:6pt} .doc-content .c28{height:10pt} .doc-content .c30{height:0pt} .doc-content .c19{text-decoration:none} .doc-content .c27{color:#000000} .doc-content .c40{height:229.5pt} .doc-content .c24{page-break-after:avoid} .doc-content .title{padding-top:0pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content .subtitle{padding-top:0pt;color:#000000;font-size:9pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content li{color:#000000;font-size:10pt;font-family:"Roboto"} .doc-content p{margin:0;color:#000000;font-size:10pt;font-family:"Roboto"} .doc-content h1{padding-top:10pt;color:#0b5394;font-weight:700;font-size:13pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;text-align:left} .doc-content h2{padding-top:7pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h3{padding-top:5pt;color:#0b5394;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h4{padding-top:7pt;color:#0b5394;font-weight:700;font-size:11pt;padding-bottom:0pt;font-family:"Roboto";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h5{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.0;page-break-after:avoid;text-align:left} .doc-content h6{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.0;page-break-after:avoid;font-style:italic;text-align:left} .doc-content </style><div class="c9 doc-content"><div class="gdoc-header"><p class="c20 c23 title" id="h.rpllnf848yq9"><span class="c38">Kenzi Connor</span></p><h4 class="c0" id="h.xjrwwf7qmwmw"><span>Staff Software Engineer - VP Engineering - Director of Engineering - CEO &amp; CTO</span></h4><hr><p class="c28 c35"><span class="c5"></span></p><a id="t.1dc60d2def4fb5de17dcce9ea07125359b500b90"></a><a id="t.0"></a></div><table class="c37"><tr class="c30"><td class="c33" colspan="2" rowspan="1"><h1 class="c7 c23" id="h.hpbcrex2a2ry"><span class="c16 c1">CLIENTS</span></h1><p class="c32"><span class="c17">American Cancer Society   ·   One Medical / Amazon   ·   Bank of New York Mellon   ·   Commvault   ·   Fastly   · Gusto   ·   Public Library of Science   ·   World Health Organization   ·   Vital Strategies   ·   Key Fortune 50s </span></p></td></tr><tr class="c40"><td class="c14" colspan="1" rowspan="1"><h1 class="c7 c23" id="h.9szobleufb2u"><span>SUMMARY</span><span class="c21 c27">        </span><span>20+ Years</span></h1><p class="c20"><span class="c5">Software engineering; engineering management; executive leadership</span></p><p class="c7"><span class="c5">High-compliance spaces: fin/edu/health/gov tech</span></p><p class="c7"><span class="c5">High-throughput, low-latency, low-downtime systems</span></p><p class="c7"><span>Management of cross-functional teams and cross-team collabs</span></p><p class="c20"><span class="c5">Resilience in high-pressure situations: rush jobs &amp; very high-profile clients</span></p><p class="c7"><span>Responsible for </span><span>client relationships and all aspects of businesses</span></p><h1 class="c22" id="h.y7d3xdxnr44m"><span class="c1 c16">EXPERIENCE</span></h1><h2 class="c7 c23 c24" id="h.rfgvkg2ifhfd"><span class="c13">CEO &amp; CTO </span><span class="c19">- Cloud City Development</span><span class="c21 c19">        </span><span class="c8">2010 - NOW</span></h2><p class="c7"><span class="c5">​​Founded and grew 35 person software design + development firm</span></p><p class="c7"><span>Principal Engineer and CTO</span><span class="c5"> consultant for clients</span></p><p class="c7"><span class="c11">Built teams that IPO’ed, got acquired and </span><span>secured </span><span class="c11">$100s of millions </span><span>in</span><span class="c5"> funding</span></p><h2 class="c0" id="h.29h9tc9myslc"><span class="c13 c17">CTO &amp; Advisor</span><span class="c17 c19"> - </span><span>OKCupid Labs for Match.com</span><span class="c19">        </span><span class="c1">2011 - 2013</span></h2><p class="c7"><span class="c11">Built team from 0 to </span><span>mid-30 headcount</span><span class="c11"> within 7 month</span><span>s of initial engagement</span></p><p class="c7"><span class="c5">Weekly strategy sessions for dozens of properties, with tens of millions of users</span></p><p class="c7"><span class="c11">Managed </span><span>full</span><span class="c5"> redesign and re-architecture of the largest of these properties</span></p><p class="c7"><span class="c11">Established </span><span>an effective</span><span class="c11"> engineering team that could continue to deliver after </span><span>I left</span></p><h2 class="c0" id="h.rfi6q2d9iumk"><span class="c13 c17">Senior </span><span class="c13 c17">Software Engineer</span><span class="c17 c19"> - Pivotal Labs</span><span class="c19">        </span><span class="c1">2010 - 2011</span></h2><p class="c20"><span class="c5">Emergency jill-of-all-trades across both complex frontend and high-scale backend</span></p><p class="c20"><span class="c5">Ramped up quickly on 4 projects in 7 months, contributing effectively immediately</span></p><p class="c20"><span class="c5">Built developer infrastructure for high-scale, no-downtime migration from VPS to AWS</span></p><p class="c20"><span class="c5">Debugged mass-scale throughput/IO concurrency limitations</span></p><h2 class="c0" id="h.g4ucg0t92eed"><span class="c13">Senior Software Engineer</span><span> - Yieldbuild        </span><span class="c10 c1">2007 - 2010</span></h2><p class="c7"><span class="c11">Co-authored nginx &amp; </span><span>R</span><span class="c5">ack handlers w/ billions of monthly uniques</span></p><p class="c7"><span>Built</span><span class="c11"> </span><span>primary </span><span class="c11">report</span><span>ing/data</span><span class="c11"> site</span><span> with dynamic data-viz</span><span class="c11"> in </span><span>Flex</span></p><p class="c7"><span>F</span><span class="c11">ramework</span><span> and infrastructure </span><span class="c11">updates</span><span> </span><span class="c5">with a zero-downtime requirement</span></p><p class="c7"><span class="c11">Optimized payloads of .js within individual IP packet size constraints</span></p><h2 class="c0" id="h.lhlw0xilj6e9"><span class="c13 c17">CEO &amp; CTO</span><span class="c17 c19"> - InfoSauce        </span><span class="c1">2003 - 2007</span></h2><p class="c7"><span class="c5">​​Co-founded and grew 10 person software design + development firm</span></p><p class="c7"><span class="c5">Principal Engineer and CTO consultant for clients</span></p><p class="c7"><span class="c5">Continued to develop high-profile (NDA) banking clients </span></p><h2 class="c0" id="h.a969m8rb2eyh"><span class="c13 c17">Lead Developer</span><span class="c17 c19"> - BridgeLine Software</span><span class="c21 c19">        </span><span class="c1">2002 - 2003</span></h2><p class="c7"><span>H</span><span class="c5">ead dev for Wall Street/financial work with global roll-outs</span></p><h2 class="c0" id="h.25vnc0jdczy5"><span class="c13 c17">Developer</span><span class="c17 c19"> - Hall Kinion</span><span class="c19 c21">        </span><span class="c1">2001 - 2002</span></h2><p class="c7"><span class="c12">Rebuilt mortgage services app from Access DB to current web frameworks</span></p><h2 class="c0" id="h.lagr5hivylpj"><span class="c13">Technology Production Assistant </span><span>- University of Utah        </span><span class="c10 c1">2000 - 2001</span></h2><p class="c7"><span class="c26">Built technology-assisted curriculum (video, multimedia, online) for professors</span></p><h1 class="c22" id="h.y47gkvhij2y2"><span>EDUCATION</span><span class="c21 c27">        </span></h1><h2 class="c7 c23 c24" id="h.3knziuql1ek5"><span class="c13 c17">Presidential Scholar full-ride</span><span class="c17 c19"> - University of Utah</span><span class="c10 c17 c19 c27">        </span></h2><p class="c7"><span class="c5">Honors major in CS; minors in math, physics, and chemistry</span></p><p class="c7"><span class="c5">Trying to make World Cup in Skiing or would have attended MIT/Stanford/etc</span></p><p class="c7"><span class="c5">Dropped out to found a tech company</span></p></td><td class="c34" colspan="1" rowspan="1"><h3 class="c20 c24" id="h.7j8zpq2r5msy-1"><span class="c10 c1">TECHNICAL</span></h3><p class="c20 subtitle" id="h.wtepv1gt77f5"><span class="c17 c19 c27 c29">Rust, Ruby, Javascript</span></p><ul class="c36 lst-kix_n2leh2ezqw7n-0 start"><li class="c4 subtitle li-bullet-0" id="h.4jdyssvd7cge"><span class="c3">Technical Architecture</span></li><li class="c4 subtitle li-bullet-0" id="h.wmrg1c7rch8p"><span class="c3">Infra/CI+CD/DevOps</span></li><li class="c4 subtitle li-bullet-0" id="h.xkbks4ktqhpi"><span class="c3">Git, Bash/zsh, CLI, Posix</span></li><li class="c4 subtitle li-bullet-0" id="h.n5jxomfsns6w"><span class="c3">GitHub Actions, chef</span></li><li class="c4 subtitle li-bullet-0" id="h.aetfetkjx4mo"><span class="c3">Agile / XP / TDD</span></li><li class="c4 subtitle li-bullet-0" id="h.trenayyfinzx"><span class="c3">A/B Testing</span></li><li class="c4 subtitle li-bullet-0" id="h.qrpnw7rqow2l"><span class="c3">PostgreSQL, MySQL, etc</span></li><li class="c4 subtitle li-bullet-0" id="h.q67yaq1hjxkr"><span class="c3">HBase/HDFS, MongoDB, Redis, Memcache, CouchDB</span></li><li class="c4 subtitle li-bullet-0" id="h.k2h3pbdn7o70"><span class="c3">Ruby on Rails, Node.js</span></li><li class="c4 subtitle li-bullet-0" id="h.v8yvnuhegtbh"><span class="c3">HTML, CSS, XML, SCSS</span></li></ul><p class="c20 c25 subtitle" id="h.6tk9dghu8r2y"><span class="c17">Previously</span><span class="c3">:<br>C,  C++,  Lisp, C#, Java, Python, Flash, Flex, ActionScript, ASP, VBScript, VB COM, MSSQL</span></p><h3 class="c18" id="h.iswrqopozzv1"><span class="c10 c1">OTHER SKILLS</span></h3><p class="c20 subtitle" id="h.3p6kv6i9c78s"><span class="c3">Executive Leadership</span></p><p class="c20 subtitle" id="h.y5yer98lau39"><span class="c3">Engineering Management</span></p><p class="c20 subtitle" id="h.lw84wpd8hva0"><span class="c3">Hiring / Retention</span></p><p class="c20 subtitle" id="h.dfl58pg3hcj8"><span>Consultative Sales </span></p><h3 class="c18" id="h.1f8rb3ro4hqc"><span class="c10 c1">CURRENT FOSS</span></h3><p class="c20 c25 subtitle" id="h.hibw1w1clz5y"><span class="c2"><a class="c15" href="https://knz.ai/cega">knz.ai/cega</a></span><span><br></span><span class="c3">Rust library for parsing CGA/EGA graphics binaries</span></p><p class="c20 c25 subtitle" id="h.vy10a8f6yeol"><span class="c2"><a class="c15" href="https://knz.ai/zolaction">knz.ai/zolaction</a></span><span><br></span><span class="c3">Github Action to deploy Rust static site gen to GH Pages</span></p><h3 class="c18" id="h.tuxh7mwdaxox"><span class="c10 c1">MENTORSHIP</span></h3><p class="c20 subtitle" id="h.n9koaybu32la"><span class="c3">Dev Bootcamp</span></p><p class="c20 subtitle" id="h.fbo5qxwu86ms"><span class="c3">Mills College</span></p><p class="c20 subtitle" id="h.s2ox737ltine"><span class="c3">MIT MakerHealth</span></p><p class="c20 subtitle" id="h.35a91qpfumht"><span class="c3">ProInspire</span></p><p class="c20 subtitle" id="h.x8mf3avab1s2"><span class="c3">Rails Bridge </span></p><p class="c20 subtitle" id="h.bfwhjrlw3mz3"><span class="c3">Rails Girls</span></p><h3 class="c18" id="h.cxxkes25b26"><span class="c1 c10">SPEAKING</span></h3><p class="c20 subtitle" id="h.zacil87x794c"><span class="c3">RubyConf</span></p><p class="c20 subtitle" id="h.l6yrgnyu8euv"><span class="c3">Madison Ruby</span></p><h3 class="c18" id="h.7vpof3shb461"><span class="c10 c1">LINKS &amp; CONTACT</span></h3><p class="c20 subtitle" id="h.b4gjc6hqdwpd"><span class="c2"><a class="c15" href="http://linkedin.com/in/knzai">linkedin.com/in/knzai</a></span></p><p class="c20 subtitle" id="h.hmthhnjyls54"><span class="c2"><a class="c15" href="http://twitter.com/knzconnor">twitter.com/knzconnor</a></span></p><p class="c20 subtitle" id="h.uq0twnkgvaa"><span class="c2"><a class="c15" href="http://github.com/knzai">github.com/knzai</a></span></p><p class="c20 subtitle" id="h.jgsdnbct1snf"><span class="c2"><a class="c15" href="https://knz.ai/resume/">knz.ai/resume/</a></span></p><p class="c20 subtitle" id="h.tz7bgxcgar1a"><span class="c2"><a class="c15" href="mailto:resume@knz.ai">resume@knz.ai</a></span></p><p class="c20 subtitle" id="h.73smk22uuy0s"><span>Oakland, C</span><span>A</span><span class="c3">, 94602</span></p><h3 class="c18" id="h.35ahu7khp4li"><span class="c10 c1">PURSUITS inc. FORMER</span></h3><ul class="c36 lst-kix_cl2h265qjup8-0 start"><li class="c4 subtitle li-bullet-0" id="h.smk6a2y2qg48"><span class="c3">#36 in US: Dual Mogul Skiing</span></li><li class="c4 subtitle li-bullet-0" id="h.iuk50k950i67"><span class="c3">Wing Chun (Kung Fu)</span></li><li class="c4 subtitle li-bullet-0" id="h.yo5bwjkog5zk"><span class="c3">Circus Arts (straps and acro)</span></li><li class="c4 subtitle li-bullet-0" id="h.vxsynkkqxlm6"><span class="c3">#1-2 weekly 🌎 HL2 Oz DM</span></li></ul></td></tr></table><p class="c20 c28"><span class="c5"></span></p></div>    
 
 
   

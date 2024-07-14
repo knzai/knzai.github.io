@@ -21,14 +21,19 @@
       <link rel="alternate" type="application/rss+xml" title="Kenzi Connor RSS Feed" href="https://knz.ai/rss.xml" />
       
       
+      
+        <meta property="og:image" content="/assets/images/me.jpg" />
+      
     </head>
     <body class="theme-base-08 layout-reverse">
       <div class="sidebar">
         
           <div class="container sidebar-sticky">
-  <ul class="sidebar-nav">
-    <li class="sidebar-nav-item active">projects</li><li class="sidebar-nav-item">
+  <ul class="sidebar-nav"><li class="sidebar-nav-item">
       <a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;" class=>posts</a> - <a class="scroll-link" href="#posts">#</a>
+    </li>
+    <li class="sidebar-nav-item active">projects</li><li class="sidebar-nav-item">
+      <a href="https:&#x2F;&#x2F;knz.ai&#x2F;about&#x2F;" class=>about</a> - <a class="scroll-link" href="#about">#</a>
     </li>
   <li class="sidebar-nav-item">
       <a href="https:&#x2F;&#x2F;knz.ai&#x2F;resume&#x2F;" class=>resume</a> - <a class="scroll-link" href="#resume">#</a>
@@ -96,31 +101,31 @@
 <li>Github Repository: <a href="https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9">gist</a></li>
 </ul>
 <p>Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">./ggdrive.sh -h
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">Name:</span><span> ggdrive.sh (1.2.0)
+</span><span style="color:#bf616a;">Description:</span><span> Download google drive file exports, eg gdocs -&gt; pdf
+</span><span style="color:#bf616a;">Usage: 
+</span><span style="color:#a3be8c;">&lt;G_API_KEY=XXXX</span><span>&gt; ./ggdrive.sh </span><span style="color:#bf616a;">[-h, --help</span><span>] </span><span style="color:#b48ead;">[</span><span>-v</span><span style="color:#b48ead;">] [</span><span>-e</span><span style="color:#b48ead;">] [</span><span>-g &lt;g_api&gt;</span><span style="color:#b48ead;">] [</span><span>-t &lt;tempfile&gt;</span><span style="color:#b48ead;">] [</span><span>-u &lt;user_agent&gt;</span><span style="color:#b48ead;">] [</span><span>csv_file</span><span style="color:#b48ead;">]
 </span><span>
-</span><span> </span><span style="color:#bf616a;">SYNOPSIS
-</span><span>    </span><span style="color:#bf616a;">GAPI_KEY</span><span>=**** </span><span style="color:#bf616a;">ggdrive.sh </span><span style="color:#b48ead;">[</span><span>-egtuhv</span><span style="color:#b48ead;">] </span><span>&lt;csvfile&gt; </span><span style="color:#65737e;">#-h or --help for more details
-</span><span> 
-</span><span> </span><span style="color:#bf616a;">DESCRIPTION
-</span><span>    </span><span style="color:#65737e;">#Download google drive file exports, eg gdocs -&gt; pdf
+</span><span style="color:#bf616a;">Environoment</span><span> variables:
+</span><span>   </span><span style="color:#bf616a;">G_API_KEY</span><span>           REQUIRED Google Cloud API Key with access to Google Drive API
 </span><span>
-</span><span> </span><span style="color:#bf616a;">ARGUMENTS
-</span><span>    $</span><span style="color:#bf616a;">1 </span><span>&lt;csvfile&gt;      </span><span style="color:#65737e;">#Leave blank for noop (add -e for lib usage)
-</span><span>                      </span><span style="color:#65737e;">#Row format: gdrive_file_id,mime_type,dest,min_size\n                 
+</span><span style="color:#bf616a;">Arguments:
+</span><span>   </span><span style="color:#bf616a;">[csv_file]</span><span>          Path/to/file.csv. Leave blank for NOOP.
 </span><span>
-</span><span> </span><span style="color:#bf616a;">OPTIONS
-</span><span>    </span><span style="color:#bf616a;">-e, --export      </span><span style="color:#65737e;">#Export the functions for your own use
-</span><span>    </span><span style="color:#bf616a;">-g, --gapi_url    </span><span style="color:#65737e;">#Specify different endpoint of the google drive api
-</span><span>    </span><span style="color:#bf616a;">-t, --tempfile    </span><span style="color:#65737e;">#If you want to be particular about the tempfile
-</span><span>    </span><span style="color:#bf616a;">-u, --user_agent  </span><span style="color:#65737e;">#I don&#39;t think Google actually cares, but hey
+</span><span style="color:#bf616a;">Flags:
+</span><span>   </span><span style="color:#bf616a;">[-e, --export</span><span>]      Export functions. Use w/o </span><span style="color:#b48ead;">[</span><span>csv_file</span><span style="color:#b48ead;">]</span><span> for custom handling
+</span><span>   </span><span style="color:#bf616a;">[-v, --version</span><span>]     Output version info. Long form provides more metadata
+</span><span>   </span><span style="color:#bf616a;">[-h, --help</span><span>]        Output help. Long form provides more info, examples
 </span><span>
-</span><span>    </span><span style="color:#bf616a;">-h, --help        </span><span style="color:#65737e;">#Print this help
-</span><span>    </span><span style="color:#bf616a;">-v, --version     </span><span style="color:#65737e;">#Print script information
+</span><span style="color:#bf616a;">Options
+</span><span>   </span><span style="color:#65737e;">#Specify endpoint of the google drive api
+</span><span>   </span><span style="color:#bf616a;">[-g, --g_api</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">https://www.googleapis.com/drive/v2</span><span>&#39;}
 </span><span>
-</span><span> </span><span style="color:#65737e;">#CURL USAGE - if it gets popular rate limiting, but that&#39;s not a concern now
-</span><span>    </span><span style="color:#bf616a;">CSVFILE</span><span>=</span><span style="color:#a3be8c;">gdrive_files.csv </span><span>&amp;&amp; </span><span style="color:#bf616a;">GGTEMP</span><span>=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">mktemp -t</span><span style="color:#a3be8c;"> ggdriveXXXXXXXXXX.sh)\
-</span><span>      &amp;&amp; </span><span style="color:#bf616a;">curl -s -L</span><span> https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9/raw\
-</span><span>      &gt; $</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">bash </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>$</span><span style="color:#bf616a;">CSVFILE </span><span>&amp;&amp; </span><span style="color:#96b5b4;">echo </span><span>$</span><span style="color:#bf616a;">GGTEMP </span><span>&amp;&amp; </span><span style="color:#bf616a;">rm </span><span>$</span><span style="color:#bf616a;">GGTEMP
+</span><span>   </span><span style="color:#65737e;">#If you want to be particular about the temporary file              
+</span><span>   </span><span style="color:#bf616a;">[-t, --tempfile</span><span>] &lt;arg&gt; {tempfile}
+</span><span>
+</span><span>   </span><span style="color:#65737e;">#I don&#39;t think Google actually cares, but hey
+</span><span>   </span><span style="color:#bf616a;">[-u, --user_agent</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9</span><span>&#39;}
 </span></code></pre>
 
   
