@@ -1,6 +1,6 @@
 +++
 title = "posts"
 template = "section.html"
-weight = 9
+weight = 1
 sort_by = "date"
 +++

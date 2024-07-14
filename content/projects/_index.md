@@ -1,5 +1,5 @@
 +++
 title = "projects"
 template = "section.html"
-weight = 10
+weight = 5
 +++

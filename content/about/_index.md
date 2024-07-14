@@ -1,24 +1,16 @@
 +++
 title = "about"
-draft = true
-weight = 5
+weight = 10
 [extra]
 skip_title=true
 +++
 
-<img src="{{resize_image(path='/assets/images/me.jpg', width=200, height=200) }}"/>Despite my cheeky domain, I am very much a human, with decades of experience as a software engineer, engineering manager, and tech executive.
+<img src="{{resize_image(path='/assets/images/me.jpg', width=200, height=200) }}"/>With over 20 years of experience in software engineering and management, I have expertise in various high-compliance sectors such as fin/ed/health/gov tech and leading the development of high-throughput, low-latency, low-downtime systems. I particularly enjoy management of cross-functional teams and cross-team collabs.
 
-As a manager I try to be warm and approachable and create a space of safety and open communication so we can still set team expectations very high without also creating anxiety, a constant sense of being under the gun, and burnout leading to retention problems by doing so by fiat. I approach all situations with my team from a place of curiousity and frequently have been able to turn around performance issues that would traditionally have led to a PIP and loss of talent. I beleive strongly in servant leadership and that my place is not to make technical decisions for them, but to help them grow into a team that can make the right decisions as often as possible, and learn from the wrong ones when not.
+As a queer trans woman, I strongly believe that diverse teams yield better results. In my leadership role, I strive to bring unique perspectives and prioritize creating a safe, communicative environment while also setting high team expectations. I believe in servant leadership and empowering my team to make the right decisions. I have a track record of addressing performance issues without resorting to punitive measures (an rare skill in tech), and I work hard to earn loyalty, which significantly improves team cohesion and retention.
 
-As an engineer, I'm very much a [T shaped polyglot](https://en.wikipedia.org/wiki/T-shaped_skills), having professionally worked with many languages (check the sidebar on my resume) and having 15+ years experience with Ruby and other web related languages. I remember the [browser wars](https://en.wikipedia.org/wiki/Browser_wars) and all the horrible work-arounds we had to use. The first language I genuinely liked was the Lisp my college professor adored and made us write an interpeter for. This probably influenced my attempts to make Javascript do more than it could at that time (pre ajax/xmlhttprequest), and I still have a softspot for it. After a spate of ASP/PHP/python(Zope, uggh)/Java(Spring and j2ee, double uggh), I finally discovered Ruby and that become a staple of my career for well over the next decade.
+As an engineer, I am a T-shaped polyglot: I have worked with almost every widely used web production language of the last 20 years and have particularly been working with Ruby on Rails for almost that entire time. My current other favorites include Rust (supplmented by by bash and GitHub Actions) for dealing with 80s game file formats: eventually I plan to rebuild an engine for Ultima 1-3. I'm also one of those weirdos who actually likes maintaining and improving others code, infrastructure and CI/CD pipelines.
 
-Lately, I've been enoying Rust for side projects, such as parsing CGA/EGA binary files from games ([cega](/cega)) or publishing this site with [zola](https://www.getzola.org/) and thus learning all about Github Actions while deploying it [zola-build](/zola-build).
+In addition to my professional background, I am an autodidact with a passion for learning, which began at a young age when I taught myself to read by 2 1/2 years old from [Serendipity books](https://en.wikipedia.org/wiki/Serendipity_(book_series)) author read-alongs, and to program at 8 years old from [type in programs in old computing magazines](https://en.wikipedia.org/wiki/Type-in_program).
 
-I have a somewhat unusual predilection in that I enjoy maintaining code I didn't write (or that I did). Give me something to refactor and improve, to streamline, to add CI/CD to, and to otherwise improve and I'll happily plug away it with my brain cycling in the background and coming up with new tooling to help. I'll tinker with getting a bunch of bash scripts (that's all GH actions really are at their core) just so for deployment. I'll massage the API of the CLI till the parameters are optimal.
-
-I have a strong belief that more diverse teams lead to better results. There's been so much said on this topic, including studies on the matter, that I don't know that I need to get into it.
-
-
-Autodidact par excellence, I taught myself to read at 2 1/2 with the audio tape read alongs for the [Serendipity childrens book series](https://en.wikipedia.org/wiki/Serendipity_\(book_series\)) and to program at 8 from computing magazine [type in games](https://en.wikipedia.org/wiki/Type-in_program) of the 80s.
-
-In high school I grew more interested in chemistry and chemical engineering after reading the works of [Erik K Drexler](https://en.wikipedia.org/wiki/K._Eric_Drexler) who made it seem like molecular nanotechnology was just around the corner. It wasn't until my collegete attempts at Organic Chemistry that I reconsidered and realized there was an interest and faculty I had all along that might make an interesting field.
+I was also a competitive mogul skiier with ambitions of the Olympics and hoped to save the world with nanotechnology (the 90s were an ambitious era), before my O-Chem course foiled that dream and returned to computing. My diverse interests have led me on a unique journey that has contributed to my well-rounded perspective in both technology and beyond.
