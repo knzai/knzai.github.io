@@ -3,7 +3,7 @@
     <li class="sidebar-nav-item active">{{navitem.title}}</li>
   {%- else -%}
     <li class="sidebar-nav-item">
-      <a href="{{ navitem.permalink }}" class=>{{navitem.title}}</a> - <a class="scroll-link" href="#{{ navitem.title}}">#</a>
+      <a href="{{ navitem.permalink }}" class=>{{navitem.title}}</a>{%- if current_path and current_path == "/" %} - <a class="scroll-link" href="#{{ navitem.title}}">#</a> {%- endif -%}
     </li>
   {%- endif -%}
 {%- endif -%}
