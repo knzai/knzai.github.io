@@ -9,6 +9,8 @@ aliases = ["/ggdrive"]
 
 Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site
 
+{{header_image()}}
+
 ```bash
 Name: ggdrive.sh (1.2.0)
 Description: Download google drive file exports, eg gdocs -> pdf

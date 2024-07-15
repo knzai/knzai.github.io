@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
+{%- import "macros.html" as macros -%}
 {% block open_graph %}
-	<meta property="og:image" content="{{page.extra | get(key="image", default=config.extra.default_image)}}" />
+	<meta property="og:image" content="{{get_url(path=macros::header_image())}}" />
 	<meta property="og:title" content="Kenzi Connor: {{ page.title }}">
 	<meta property="og:description" content="{{ page.description }}">
 {% endblock open_graph %}

@@ -2,8 +2,6 @@
 title = "cega"
 description = "CGA/EGA graphics binary file parsing with terminal art preview and png/gif/etc output"
 aliases=["/cega"]
-[extra]
-image="/projects/cega.png"
 +++
 
 - Language/Platform: Rust
@@ -12,4 +10,4 @@ image="/projects/cega.png"
 
 Full documentation on the GH repo README
 
-![image](/projects/cega.png)
+{{header_image()}}
