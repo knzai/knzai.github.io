@@ -22,7 +22,7 @@
       
       
       
-	<meta property="og:image" content="gdocs_header.png" />
+	<meta property="og:image" content="https://knz.ai/posts/cleaning-gdocs.png" />
 	<meta property="og:title" content="Kenzi Connor: Cleaning Up Web Published Google Docs">
 	<meta property="og:description" content="Parsing content with Rust regexes in Zola">
 
@@ -96,7 +96,7 @@
   <span class="post-date">2024-07-06</span>
   
     <p>As you probably know, Google Docs "Publish to Web" settings doesn't provide the cleanest html, not to mention the giant header it tacks on.</p>
-<p><img src="/posts/gdocs_header.png" alt="image" /></p>
+<p><img src="https://knz.ai/posts/cleaning-gdocs.png" alt="Parsing content with Rust regexes in Zola" title="Cleaning Up Web Published Google Docs" /></p>
 <span id="continue-reading"></span>
 <p>While updating my resume and <a href="https://github.com/knzai">working on some Rust projects</a>, I decided I needed somewhere to publish both. Google Doc's built-in web publish doesn't do a perfect job on translating the formatting, even without considering the header. And if you want it on your own site you have to embed it on your site somehow. If you use the "embedded" url they give you for sticking in iframe it's a little better, but using iframe has plenty of downsides, such as less control over said formatting issues.</p>
 <p>Since it's a chance to do some more rust, I decided to use <a href="https://www.getzola.org/">Zola</a>, the Rust version of the Ruby based static site generator, <a href="https://jekyllrb.com/">Jekyll</a>, which itself is used for easily generating <a href="https://pages.github.com/">Github Pages</a>. Using a static site generator means I could just <a href="https://www.getzola.org/documentation/templates/overview/#load-data">pull in the content</a> of my GDoc resume at the time I run it and bam, web resume.</p>

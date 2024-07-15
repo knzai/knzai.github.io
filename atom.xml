@@ -58,7 +58,7 @@
         <id>https://knz.ai/posts/cleaning-gdocs/</id>
         
         <summary type="html">&lt;p&gt;As you probably know, Google Docs &quot;Publish to Web&quot; settings doesn&#x27;t provide the cleanest html, not to mention the giant header it tacks on.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;gdocs_header.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;cleaning-gdocs.png&quot; alt=&quot;Parsing content with Rust regexes in Zola&quot; title=&quot;Cleaning Up Web Published Google Docs&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 </summary>
         
     </entry>
