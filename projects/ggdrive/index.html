@@ -101,32 +101,6 @@
 </ul>
 <p>Used for purposes such as grabbing the latest pdf version of a Google Doc automatically for use in a generated static site</p>
 <p><img src="https://knz.ai/projects/ggdrive.png" alt="Bash script to export files from Google Drive, eg gdoc -&gt; pdf" title="ggdrive.sh" /></p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">Name:</span><span> ggdrive.sh (1.2.0)
-</span><span style="color:#bf616a;">Description:</span><span> Download google drive file exports, eg gdocs -&gt; pdf
-</span><span style="color:#bf616a;">Usage: 
-</span><span style="color:#a3be8c;">&lt;G_API_KEY=XXXX</span><span>&gt; ./ggdrive.sh </span><span style="color:#bf616a;">[-h, --help</span><span>] </span><span style="color:#b48ead;">[</span><span>-v</span><span style="color:#b48ead;">] [</span><span>-e</span><span style="color:#b48ead;">] [</span><span>-g &lt;g_api&gt;</span><span style="color:#b48ead;">] [</span><span>-t &lt;tempfile&gt;</span><span style="color:#b48ead;">] [</span><span>-u &lt;user_agent&gt;</span><span style="color:#b48ead;">] [</span><span>csv_file</span><span style="color:#b48ead;">]
-</span><span>
-</span><span style="color:#bf616a;">Environoment</span><span> variables:
-</span><span>   </span><span style="color:#bf616a;">G_API_KEY</span><span>           REQUIRED Google Cloud API Key with access to Google Drive API
-</span><span>
-</span><span style="color:#bf616a;">Arguments:
-</span><span>   </span><span style="color:#bf616a;">[csv_file]</span><span>          Path/to/file.csv. Leave blank for NOOP.
-</span><span>
-</span><span style="color:#bf616a;">Flags:
-</span><span>   </span><span style="color:#bf616a;">[-e, --export</span><span>]      Export functions. Use w/o </span><span style="color:#b48ead;">[</span><span>csv_file</span><span style="color:#b48ead;">]</span><span> for custom handling
-</span><span>   </span><span style="color:#bf616a;">[-v, --version</span><span>]     Output version info. Long form provides more metadata
-</span><span>   </span><span style="color:#bf616a;">[-h, --help</span><span>]        Output help. Long form provides more info, examples
-</span><span>
-</span><span style="color:#bf616a;">Options
-</span><span>   </span><span style="color:#65737e;">#Specify endpoint of the google drive api
-</span><span>   </span><span style="color:#bf616a;">[-g, --g_api</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">https://www.googleapis.com/drive/v2</span><span>&#39;}
-</span><span>
-</span><span>   </span><span style="color:#65737e;">#If you want to be particular about the temporary file              
-</span><span>   </span><span style="color:#bf616a;">[-t, --tempfile</span><span>] &lt;arg&gt; {tempfile}
-</span><span>
-</span><span>   </span><span style="color:#65737e;">#I don&#39;t think Google actually cares, but hey
-</span><span>   </span><span style="color:#bf616a;">[-u, --user_agent</span><span>] &lt;arg&gt; {&#39;</span><span style="color:#a3be8c;">gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9</span><span>&#39;}
-</span></code></pre>
 
   
 </div>
