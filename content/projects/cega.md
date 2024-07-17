@@ -1,6 +1,6 @@
 +++
 title = "cega"
-description = "CGA/EGA graphics binary file parsing with terminal art preview and png/gif/etc output"
+description = "CGA/EGA (graphics formats from 80s games) parsing with png/etc output, colored terminal preview, pre-alpha of wasm front-end"
 aliases=["/cega"]
 +++
 
