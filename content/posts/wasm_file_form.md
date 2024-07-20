@@ -78,7 +78,7 @@ html! {
     />
 ```
 
-This is the core of the tricky bits. Again gloo streamlines a lot and `gloo::file::callbacks::read_as_bytes` handles the async parsing of the file data itself out of the file list. Since this is async and hands back a FileReader, we have to stick that reader somewhere to keep it alive and going, and a hashmap keyed off the filename works fine. When this completes we store the file_data in app state directly as a Vec<byte> rather than adding more complex transforms back and forth across the bindgens and sticking it in a form input, reenable submit and unref the reader closure from our hashmap.
+This is the core of the tricky bits. Again gloo streamlines a lot and `gloo::file::callbacks::read_as_bytes` handles the async parsing of the file data itself out of the file list. Since this is async and hands back a FileReader, we have to stick that reader somewhere to keep it alive and going, and a hashmap keyed off the filename works fine. When this completes we store the file_data in app state directly as a Vec<byte> (rather than adding more complex transforms back and forth across the bindgens and sticking it in a form input), reenable submit, and unref the reader closure from our hashmap.
 
 ```rust
 Msg::Loaded(name, data) => {
