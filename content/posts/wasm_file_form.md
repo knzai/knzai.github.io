@@ -6,7 +6,7 @@ date = 2024-07-20
 
 I submitted some [pull requests for additional examples](https://github.com/knzai/yew/pulls) to the top level library I'm using for Rust Wasm, [yew](https://yew.rs/). Some of the underlying tech and libraries have advanced since most examples were created, and there wasn't a simple one for one of the more common use cases (using a form with multiple fields, including a file-input selector).
 
-Given there's a lot of PRs outstanding and the their CI is a bit b0rked, I don't know hwo likely they'll get pulled in, so I should document here. Also, some of the answers apply to the underlying lbraries even if you aren't using yew and it took some digging through reddit, code, examples, and finally Discord to find the current simplest answers.
+Given there's a lot of PRs outstanding and the their CI is a bit b0rked, I don't know how likely it is they'll get pulled in, so I should document it. Also, some of the answers apply to the underlying lbraries even if you aren't using yew, and it took some digging through reddit, code, examples, and finally Discord to find the simplest answers using the current state of all the pieces.
 
 <!-- more --> 
 
