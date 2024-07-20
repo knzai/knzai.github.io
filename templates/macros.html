@@ -12,7 +12,7 @@
 {%- endmacro img_exists -%}
 
 
-{%- macro header_image(default='') -%}
+{%- macro header_image(default='/assets/images/me.jpg') -%}
    {%- set base_path = page.components | join(sep="/") -%}
    {%- set path = self::img_exists(path=base_path, default=default) -%}
    {{- path -}}
