@@ -1,0 +1,38 @@
+{%- if page -%}
+	{%- set obj = page -%}
+	{%- set base_path = page.components | join(sep="/") -%}
+{%- elif section -%}
+	{%- set obj = section -%}
+	{%- set base_path = section.components | join(sep="/") -%}
+{%- else -%}
+	{%- set obj = config -%}
+	{%- set base_path = current_path | default(value='') -%}
+{%- endif -%}
+{%- set title = 'Kenzi Connor: ' ~ obj.title | default(value=config.title) -%}
+{%- set description = obj.description | default(value=config.description) -%}
+{%- set path = current_path | default(value='') -%}
+{%- set header_image = macros::smart_img(path=base_path, default=config.extra.default_image) -%}
+
+<title>{{- title -}}</title>
+<meta name="description" content="{{ description | default(value=config.description)}}">
+<!-- {{ base_path | safe }} -->
+<!-- Open Graph Tiles -->
+<meta property="og:title" content="{{- title -}}">
+<meta property="og:description" content="{{- description -}}">
+<meta property="og:image" content="{{header_image | safe -}}" />
+<meta name="twitter:title" content="{{- title -}}">
+<meta name="twitter:description" content="{{- description -}}">
+<meta name="twitter:image" content="{{- header_image | safe -}}">
+
+<!-- Open Graph Tiles; static -->
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@knzconnor" />
+<meta name="twitter:creator" content="@knzconnor" />
+<meta property="twitter:domain" content="knz.ai">
+      
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!-- Enable responsiveness on mobile devices-->
+<!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">

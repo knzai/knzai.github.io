@@ -1,11 +1,5 @@
 {% extends "layouts/base.html" %}
-{%- block title -%}{{- section.title -}}{%- endblock title -%}
-{% block open_graph %}
-	<meta property="og:image" content="/assets/images/me.jpg" />
-	<meta property="og:title" content="Kenzi Connor: {{ section.title }}">
-	<meta property="og:description" content="{{ section.description }}">
-{% endblock open_graph %}
 {% block content %}
-{% include "partials/_breadcrumb.html" %}
-{% include "partials/_section.html" %}
+	{% include "partials/_breadcrumb.html" %}
+	{% include "partials/_section.html" %}
 {% endblock content %}

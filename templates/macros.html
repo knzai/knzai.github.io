@@ -1,4 +1,4 @@
-{%- macro img_exists(path, default='') -%}
+{%- macro smart_img(path, default='') -%}
    {%- set png = get_image_metadata(path=path ~ '.png', allow_missing=true) -%}
    {%- set jpg = get_image_metadata(path=path ~ '.jpg', allow_missing=true) -%}
    {%- if png -%}
@@ -8,12 +8,5 @@
    {%- else -%}
       {%- set path = default -%}
    {%- endif -%}
-   {{-path-}}
-{%- endmacro img_exists -%}
-
-
-{%- macro header_image(default='/assets/images/me.jpg') -%}
-   {%- set base_path = page.components | join(sep="/") -%}
-   {%- set path = self::img_exists(path=base_path, default=default) -%}
-   {{- path -}}
-{%- endmacro header_image -%}
+   {{- get_url(path=path) -}}
+{%- endmacro smart_img -%}

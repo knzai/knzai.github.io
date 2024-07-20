@@ -1,13 +1,9 @@
+{%- import "macros.html" as macros -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
     <head>
-      <title>{{- config.title -}}: {% block title %}actual human{%- endblock title -%}</title>
+      {% include "layouts/_metas.html" %}
       {% include "layouts/_head.html" %}
-      {% block extra_head %}
-      {% endblock extra_head %}
-      {% block open_graph %}
-        <meta property="og:image" content="/assets/images/me.jpg" />
-      {% endblock open_graph %}
     </head>
     <body class="{{ config.extra.color_theme }} {% if config.extra.sidebar_reverse %}layout-reverse{% endif %}">
       <div class="sidebar">
@@ -16,8 +12,7 @@
         {% endblock sidebar %}
       </div>
       <div class="content container">
-        {% block content %}
-        {% endblock content %}
+        {% block content %}{% endblock content %}
       </div>
     </body>
 </html>
