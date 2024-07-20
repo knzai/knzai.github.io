@@ -7,7 +7,17 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://knz.ai/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sat, 20 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Handling FormData and file inputs in Rust Wasm</title>
+          <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Kenzi Connor</author>
+          <link>https://knz.ai/posts/wasm-file-form/</link>
+          <guid>https://knz.ai/posts/wasm-file-form/</guid>
+          <description xml:base="https://knz.ai/posts/wasm-file-form/">&lt;p&gt;I submitted some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;knzai&#x2F;yew&#x2F;pulls&quot;&gt;pull requests for additional examples&lt;&#x2F;a&gt; to the top level library I&#x27;m using for Rust Wasm, &lt;a href=&quot;https:&#x2F;&#x2F;yew.rs&#x2F;&quot;&gt;yew&lt;&#x2F;a&gt;. Some of the underlying tech and libraries have advanced since most examples were created, and there wasn&#x27;t a simple one for one of the more common use cases (using a form with multiple fields, including a file-input selector).&lt;&#x2F;p&gt;
+&lt;p&gt;Given there&#x27;s a lot of PRs outstanding and the their CI is a bit b0rked, I don&#x27;t know hwo likely they&#x27;ll get pulled in, so I should document here. Also, some of the answers apply to the underlying lbraries even if you aren&#x27;t using yew and it took some digging through reddit, code, examples, and finally Discord to find the current simplest answers.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Exporting a Google Doc into a PDF in a Github Action</title>
           <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>

@@ -5,8 +5,29 @@
     <link rel="self" type="application/atom+xml" href="https://knz.ai/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://knz.ai"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-07-09T00:00:00+00:00</updated>
+    <updated>2024-07-20T00:00:00+00:00</updated>
     <id>https://knz.ai/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Handling FormData and file inputs in Rust Wasm</title>
+        <published>2024-07-20T00:00:00+00:00</published>
+        <updated>2024-07-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Kenzi Connor
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://knz.ai/posts/wasm-file-form/"/>
+        <id>https://knz.ai/posts/wasm-file-form/</id>
+        
+        <summary type="html">&lt;p&gt;I submitted some &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;knzai&#x2F;yew&#x2F;pulls&quot;&gt;pull requests for additional examples&lt;&#x2F;a&gt; to the top level library I&#x27;m using for Rust Wasm, &lt;a href=&quot;https:&#x2F;&#x2F;yew.rs&#x2F;&quot;&gt;yew&lt;&#x2F;a&gt;. Some of the underlying tech and libraries have advanced since most examples were created, and there wasn&#x27;t a simple one for one of the more common use cases (using a form with multiple fields, including a file-input selector).&lt;&#x2F;p&gt;
+&lt;p&gt;Given there&#x27;s a lot of PRs outstanding and the their CI is a bit b0rked, I don&#x27;t know hwo likely they&#x27;ll get pulled in, so I should document here. Also, some of the answers apply to the underlying lbraries even if you aren&#x27;t using yew and it took some digging through reddit, code, examples, and finally Discord to find the current simplest answers.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Exporting a Google Doc into a PDF in a Github Action</title>
         <published>2024-07-09T00:00:00+00:00</published>
