@@ -1,3 +1,4 @@
+{%- set path = current_path | default(value='/') -%}
 {%- if page -%}
 	{%- set obj = page -%}
 	{%- set base_path = page.components | join(sep="/") -%}
@@ -6,11 +7,15 @@
 	{%- set base_path = section.components | join(sep="/") -%}
 {%- else -%}
 	{%- set obj = config -%}
-	{%- set base_path = current_path | default(value='') -%}
+	{%- set base_path = path -%}
 {%- endif -%}
-{%- set title = 'Kenzi Connor: ' ~ obj.title | default(value=config.title) -%}
+{%- if path == '/' -%}
+	{%- set title = 'Kenzi Connor: actual human' -%}
+{%- else -%}
+	{%- set title = 'Kenzi Connor: ' ~ obj.title | default(value=config.title) -%}
+{%- endif -%}
+
 {%- set description = obj.description | default(value=config.description) -%}
-{%- set path = current_path | default(value='') -%}
 {%- set header_image = macros::smart_img(path=base_path, default=config.extra.default_image) -%}
 
 <title>{{- title -}}</title>
