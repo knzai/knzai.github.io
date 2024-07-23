@@ -9,6 +9,7 @@
 	{%- set obj = config -%}
 	{%- set base_path = path -%}
 {%- endif -%}
+
 {%- if path == '/' -%}
 	{%- set title = 'Kenzi Connor: actual human' -%}
 {%- else -%}
@@ -20,7 +21,7 @@
 
 <title>{{- title -}}</title>
 <meta name="description" content="{{ description | default(value=config.description)}}">
-<!-- {{ base_path | safe }} -->
+
 <!-- Open Graph Tiles -->
 <meta property="og:title" content="{{- title -}}">
 <meta property="og:description" content="{{- description -}}">
@@ -35,7 +36,8 @@
 <meta name="twitter:site" content="@knzconnor" />
 <meta name="twitter:creator" content="@knzconnor" />
 <meta property="twitter:domain" content="knz.ai">
-      
+
+<!-- General meta -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <!-- Enable responsiveness on mobile devices-->
