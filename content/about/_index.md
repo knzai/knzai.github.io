@@ -5,7 +5,7 @@ weight = 10
 skip_title=true
 +++
 
-<img src="{{resize_image(path='/assets/images/me.jpg', width=200, height=200) }}"/>With over 20 years of experience in software engineering and management, I have expertise in various high-compliance sectors such as fin/ed/health/gov tech and leading the development of high-throughput, low-latency, low-downtime systems. I particularly enjoy management of cross-functional teams and cross-team collabs.
+<img src="{{resize_image(path='/assets/images/me.jpg', width=200, height=200) }}"/>With over 20 years of experience in software engineering and management, I have expertise in various high-compliance sectors such as fin/ed/health/gov tech and as well as in leading the development of high-throughput, low-latency, low-downtime systems. I particularly enjoy management of cross-functional teams and cross-team collabs.
 
 As a queer trans woman, I strongly believe that diverse teams yield better results. In leadership roles, I strive to bring unique perspectives and prioritize creating a safe, communicative environment while also setting high team expectations. I believe in servant leadership and empowering my team to make the right decisions. I have a track record of addressing performance issues without resorting to punitive measures (a rare skill in tech), and I work hard to earn loyalty, which significantly improves team cohesion and retention.
 
