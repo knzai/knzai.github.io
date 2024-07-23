@@ -8,8 +8,6 @@ ETA: this, of course, I then rolled into a [bash script with way too nice of usa
 
 It turns out that grabbing the current pdf export of my resume during zola build was even easier than [cleaning the Google HTML](@/posts/cleaning_gdocs.md). Once you've setup the Google API keys it's basically one wget (which is already installed on their ubuntu runner) call.
 
-{{header_image()}}
-
 ```yml
 - name: download pdf
   shell: bash
