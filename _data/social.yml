@@ -6,6 +6,9 @@ email:
 amazon:
   name: Amazon
   icon: icon-amazon
+mastodon:
+  name: Mastodon
+  icon: icon-mastodon
 google:
   name: Google
   icon: icon-google

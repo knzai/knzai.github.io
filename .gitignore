@@ -1,0 +1,4 @@
+.env
+public
+*.sh
+_site

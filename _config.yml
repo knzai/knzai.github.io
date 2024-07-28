@@ -17,22 +17,21 @@
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang: en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title: Kenzi Connor
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
-description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+description: >
+  Staff Software Engineer - VP Engineering - Director of Engineering - CEO & CTO
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline: Staff Software Engineer - VP Engineering - Director of Engineering - CEO & CTO
 
 # A list of keywords for your blog
-keywords:              []
+keywords: []
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -42,10 +41,10 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Kenzi Connor
+  email:               site@knz.ai
   # # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  twitter:             knzconnor
 
 # Add links to the sidebar.
 menu:
@@ -69,7 +68,7 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2021. All rights reserved.
+copyright:             © 2024. All rights reserved.
 
 # Format of the permalinks
 permalink:             /blog/:categories/:year-:month-:day-:title/
@@ -354,8 +353,8 @@ plugins:
 #   yandex:              <verification-id>
 
 # Used for twitter cards
-# twitter:
-#   username:            <username>
+twitter:
+  username:            knzconnor
 
 # Used for facebook open graph
 # facebook:
@@ -364,11 +363,11 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name:                Kenzi Connor
+  links:
+    - https://twitter.com/knzconnor
+    - https://github.com/knzai
 
 
 # Plugin Configs
