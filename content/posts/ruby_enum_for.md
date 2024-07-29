@@ -1,6 +1,6 @@
 +++
 title = "Using Ruby enum_for to implement multiple paths enumerating the same Enumerable"
-description = "Idiomatic breadth-frist versus depth-first tree-traversals in Ruby"
+description = "Idiomatic breadth-first versus depth-first tree-traversals in Ruby"
 date = 2024-07-28
 +++
 
