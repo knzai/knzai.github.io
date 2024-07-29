@@ -5,8 +5,40 @@
     <link rel="self" type="application/atom+xml" href="https://knz.ai/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://knz.ai"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-07-20T00:00:00+00:00</updated>
+    <updated>2024-07-28T00:00:00+00:00</updated>
     <id>https://knz.ai/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Using Ruby enum_for to implement multiple paths enumerating the same Enumerable</title>
+        <published>2024-07-28T00:00:00+00:00</published>
+        <updated>2024-07-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Kenzi Connor
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://knz.ai/posts/ruby-enum-for/"/>
+        <id>https://knz.ai/posts/ruby-enum-for/</id>
+        
+        <summary type="html">&lt;p&gt;Anyone who as gotten very far in a basic &quot;implement this data structure&quot; tech-screen, using Ruby, hopefully knows about just making your &lt;a href=&quot;https:&#x2F;&#x2F;blog.appsignal.com&#x2F;2018&#x2F;05&#x2F;29&#x2F;ruby-magic-enumerable-and-enumerator.html&quot;&gt;class an &lt;code&gt;Enumerable&lt;&#x2F;code&gt; and implementing &lt;code&gt;#each&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; to get all of the methods of that Mixin, which people are used to using on collections in any Ruby project. Less obvious is how you tackle a more complex case, like trees (another interview classic), which have different possible traversal methods of even the same instance.&lt;&#x2F;p&gt;
+&lt;p&gt;In this post I&#x27;ll show how to use enum_for to make an interface for a Tree class that supports these different styles of usage for traversals:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ruby&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-ruby &quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Tree&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;new&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Tree&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;new&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Tree&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;new&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Tree&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;new&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;depth = [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;assert_equal depth, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree&lt;&#x2F;span&gt;&lt;span&gt;.map(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:value&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;assert_equal depth, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree&lt;&#x2F;span&gt;&lt;span&gt;.each.map(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:value&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;assert_equal depth, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree&lt;&#x2F;span&gt;&lt;span&gt;.each(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:depth&lt;&#x2F;span&gt;&lt;span&gt;).map(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:value&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;breadth = [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;7&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;assert_equal breadth, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree&lt;&#x2F;span&gt;&lt;span&gt;.breadth.map(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:value&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;assert_equal breadth, @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;tree&lt;&#x2F;span&gt;&lt;span&gt;.each(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:breadth&lt;&#x2F;span&gt;&lt;span&gt;).map(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:value&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Handling FormData and file inputs in Rust Wasm</title>
         <published>2024-07-20T00:00:00+00:00</published>
@@ -44,7 +76,7 @@
         <link rel="alternate" type="text/html" href="https://knz.ai/posts/gdoc-pdf-export/"/>
         <id>https://knz.ai/posts/gdoc-pdf-export/</id>
         
-        <content type="html" xml:base="https://knz.ai/posts/gdoc-pdf-export/">&lt;p&gt;ETA: this, of course, I then rolled into a &lt;a href=&quot;https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;ggdrive&#x2F;&quot;&gt;bash script with way too nice of usage()* for a few-liner&lt;&#x2F;a&gt;.  [*bash convention for the help function]&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://knz.ai/posts/gdoc-pdf-export/">&lt;p&gt;ETA: this, of course, I then rolled into a &lt;a href=&quot;https:&#x2F;&#x2F;knz.ai&#x2F;projects&#x2F;ggdrive&#x2F;&quot;&gt;bash script with way too nice of usage()* for a few-liner&lt;&#x2F;a&gt;.  *bash convention for the help function&lt;&#x2F;p&gt;
 &lt;p&gt;It turns out that grabbing the current pdf export of my resume during zola build was even easier than &lt;a href=&quot;https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;cleaning-gdocs&#x2F;&quot;&gt;cleaning the Google HTML&lt;&#x2F;a&gt;. Once you&#x27;ve setup the Google API keys it&#x27;s basically one wget (which is already installed on their ubuntu runner) call.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;yml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yml &quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;download pdf
 &lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;shell&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;bash

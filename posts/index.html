@@ -95,6 +95,34 @@
   
     
       
+      <div class="post ruby-enum-for">
+  
+  
+  <h2 class="post-title">
+    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;ruby-enum-for&#x2F;" id="Using Ruby enum_for to implement multiple paths enumerating the same Enumerable">Using Ruby enum_for to implement multiple paths enumerating the same Enumerable</a>: <span class="post-description">Idiomatic breadth-frist versus depth-first tree-traversals in Ruby</span>
+  </h2>
+
+  <span class="post-date">2024-07-28</span>
+  
+    <p>Anyone who as gotten very far in a basic "implement this data structure" tech-screen, using Ruby, hopefully knows about just making your <a href="https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html">class an <code>Enumerable</code> and implementing <code>#each</code></a> to get all of the methods of that Mixin, which people are used to using on collections in any Ruby project. Less obvious is how you tackle a more complex case, like trees (another interview classic), which have different possible traversal methods of even the same instance.</p>
+<p>In this post I'll show how to use enum_for to make an interface for a Tree class that supports these different styles of usage for traversals:</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span>@</span><span style="color:#bf616a;">tree </span><span>= </span><span style="color:#ebcb8b;">Tree</span><span>.</span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#ebcb8b;">Tree</span><span>.</span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#d08770;">2</span><span>, </span><span style="color:#ebcb8b;">Tree</span><span>.</span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">8</span><span>), </span><span style="color:#d08770;">5</span><span>), </span><span style="color:#ebcb8b;">Tree</span><span>.</span><span style="color:#8fa1b3;">new</span><span>(</span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>))
+</span><span>
+</span><span>depth = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>]
+</span><span>assert_equal depth, @</span><span style="color:#bf616a;">tree</span><span>.map(&amp;</span><span style="color:#a3be8c;">:value</span><span>)
+</span><span>assert_equal depth, @</span><span style="color:#bf616a;">tree</span><span>.each.map(&amp;</span><span style="color:#a3be8c;">:value</span><span>)
+</span><span>assert_equal depth, @</span><span style="color:#bf616a;">tree</span><span>.each(</span><span style="color:#a3be8c;">:depth</span><span>).map(&amp;</span><span style="color:#a3be8c;">:value</span><span>)
+</span><span>
+</span><span>breadth = [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">6</span><span>, </span><span style="color:#d08770;">7</span><span>, </span><span style="color:#d08770;">8</span><span>]
+</span><span>assert_equal breadth, @</span><span style="color:#bf616a;">tree</span><span>.breadth.map(&amp;</span><span style="color:#a3be8c;">:value</span><span>)
+</span><span>assert_equal breadth, @</span><span style="color:#bf616a;">tree</span><span>.each(</span><span style="color:#a3be8c;">:breadth</span><span>).map(&amp;</span><span style="color:#a3be8c;">:value</span><span>)
+</span></code></pre>
+
+    <p class="continue-reading"><a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;ruby-enum-for&#x2F;#continue-reading">Continue Reading</a></p>
+  
+</div>
+    
+      
       <div class="post wasm-file-form">
   
   
@@ -121,7 +149,7 @@
 
   <span class="post-date">2024-07-09</span>
   
-    <p>ETA: this, of course, I then rolled into a <a href="https://knz.ai/projects/ggdrive/">bash script with way too nice of usage()* for a few-liner</a>.  [*bash convention for the help function]</p>
+    <p>ETA: this, of course, I then rolled into a <a href="https://knz.ai/projects/ggdrive/">bash script with way too nice of usage()* for a few-liner</a>.  *bash convention for the help function</p>
 <p>It turns out that grabbing the current pdf export of my resume during zola build was even easier than <a href="https://knz.ai/posts/cleaning-gdocs/">cleaning the Google HTML</a>. Once you've setup the Google API keys it's basically one wget (which is already installed on their ubuntu runner) call.</p>
 <pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span>- </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">download pdf
 </span><span>  </span><span style="color:#bf616a;">shell</span><span>: </span><span style="color:#a3be8c;">bash
