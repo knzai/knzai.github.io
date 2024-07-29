@@ -4,7 +4,7 @@ description = "Idiomatic breadth-first versus depth-first tree-traversals in Rub
 date = 2024-07-28
 +++
 
-Anyone who as gotten very far in a basic "implement this data structure" tech-screen, using Ruby, hopefully knows about just making your [class an `Enumerable` and implementing `#each`](https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html) to get all of the methods of that Mixin, which people are used to using on collections in any Ruby project. Less obvious is how you tackle a more complex case, like trees (another interview classic), which have different possible traversal methods of even the same instance.
+Anyone who has gotten very far in a basic "implement this data structure" tech-screen, using Ruby, hopefully knows about just making your [class an `Enumerable` and implementing `#each`](https://blog.appsignal.com/2018/05/29/ruby-magic-enumerable-and-enumerator.html) to get all of the methods of that Mixin, which people are used to using on collections in any Ruby project. Less obvious is how you tackle a more complex case, like trees (another interview classic), which have different possible traversal methods of even the same instance.
 
 In this post I'll show how to use enum_for to make an interface for a Tree class that supports these different styles of usage for traversals:
 ```ruby
