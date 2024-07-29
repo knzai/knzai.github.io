@@ -55,7 +55,7 @@ end
 ```
 By returning an [Enumerator](https://ruby-doc.org/core-2.6/Enumerator.html) from your arbitrarily named (unlike implementing `Enumerable` via `#each`) traversal methods, you allow them to be chained as usual with `#map` (or any of the other similar methods). And you can then just call these methods directly from your `#each` implementation, making the enumerable methods work when called directly on an instance of the class (defaulting to depth).
 
-Oh also make sure to deref/splat the children into your stack on breadth, so you don't mutate the children list directly. I didn't catch that till I added the tests to make sure you could repeat traversals safely. Which shows that tests are nice. Rust definitely would have made all this trickier... but in return would have caught that upfront.
+Oh also make sure to deref/splat the children into your stack on breadth, so you don't mutate the children list directly. I didn't catch that till I added the tests to make sure you could repeat traversals safely. Which shows that tests are nice... but Rust would have caught that upfront (but also made this all quite a bit trickier. Tradeoffs).
 
 In case it's of interest, here's the rest of the basic class:
 ```ruby
