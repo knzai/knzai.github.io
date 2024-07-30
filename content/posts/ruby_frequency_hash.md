@@ -27,7 +27,7 @@ So the logic is I need to come up with a subset that is only true if the rhs has
 
 You could also do something clever like \#transform_value the rhs by negative 1, zipping them togethe, taking the sum, of each, then selecting the value <= 0 entries, but that gets a little complicated, and is a lot of passes compared to just iterating the list and doing the subtraction and delete if, imo.
 
-Later I realized you could also just roll both parts cleanly into a \#delete_if and following #empty? check, but this is good enough.
+Later I saw how to get my select logic for the subset down to a clean single line (`select{ |k, v| (v - rhs[k]) > 0}.empty?`). I got there faster by just getting a working implementation first and working down from there, which is what I should have done in the screen.
 
 
 ```ruby
