@@ -25,6 +25,10 @@ From there the exact \#select criteria against the dictionary of words got into 
 
 So the logic is I need to come up with a subset that is only true if the rhs has not only the keys, or the exact keys and values, but greater or equal values at all keys for a given word. This seemed logically cleanest to me as two operations, a new subtraction operator that subtracts the values of hashes at corresponding keys and then if that returns an empty hash, it's a match. Well, if by "subtracts the values" we mean "and deletes if the rhs has more of an individual tile than needed" but that's fine for our usage, even if it's not how I'd normally implement subtraction. I guess it's "whole numbers only" subtraction, since a negative frequency count, in this usage, doesn't make sense.
 
+You could also do something clever like \#transform_value the rhs by negative 1, zipping them togethe, taking the sum, of each, then selecting the value <= 0 entries, but that gets a little complicated, and is a lot of passes compared to just iterating the list and doing the subtraction and delete if, imo.
+
+Later I realized you could also just roll both parts cleanly into a \#delete_if and following #empty? check, but this is good enough.
+
 
 ```ruby
 #tests for the subtraction that the subset relies on
