@@ -95,6 +95,26 @@
   
     
       
+      <div class="post ruby-frequency-hash">
+  
+  
+  <h2 class="post-title">
+    <a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;ruby-frequency-hash&#x2F;" id="Using Ruby's #.extend on instances to avoid modifying a base class">Using Ruby's #.extend on instances to avoid modifying a base class</a>: <span class="post-description">Making a Scrabble word-finder by adding subtraction and overloading the subset operator on #.tally supplied frequency hashes</span>
+  </h2>
+
+  <span class="post-date">2024-07-29</span>
+  
+    <p>I choked a bit on a tech screen today (at least by my own standards), by rushing to a solution too quickly, instead of working out a proper tested class. So after dinner I thought I'd revisit it and see what a cleaner solution might look like.</p>
+<p>Problem: Given a supplied scrabble dictionary (text file of words per line - in the test I swap in a small array for speed) write a method that gives all possible words for any hand/set of tiles.</p>
+<pre data-lang="ruby" style="background-color:#2b303b;color:#c0c5ce;" class="language-ruby "><code class="language-ruby" data-lang="ruby"><span>@</span><span style="color:#bf616a;">dict </span><span>= </span><span style="color:#ebcb8b;">Scrabble</span><span>::</span><span style="color:#ebcb8b;">Dictionary</span><span>.</span><span style="color:#8fa1b3;">new </span><span>[&quot;</span><span style="color:#a3be8c;">AA</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">AD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">ADD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">DAD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">BAD</span><span>&quot;]
+</span><span>assert_equal [&quot;</span><span style="color:#a3be8c;">AD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">ADD</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">DAD</span><span>&quot;], @</span><span style="color:#bf616a;">dict</span><span>.possible_words(&quot;</span><span style="color:#a3be8c;">ADD</span><span>&quot;)
+</span></code></pre>
+
+    <p class="continue-reading"><a href="https:&#x2F;&#x2F;knz.ai&#x2F;posts&#x2F;ruby-frequency-hash&#x2F;#continue-reading">Continue Reading</a></p>
+  
+</div>
+    
+      
       <div class="post ruby-enum-for">
   
   
