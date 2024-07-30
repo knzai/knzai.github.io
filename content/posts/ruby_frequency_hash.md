@@ -27,9 +27,6 @@ So the logic is I need to come up with a subset that is only true if the rhs has
 
 You could also do something clever like \#transform_value the rhs by negative 1, zipping them togethe, taking the sum, of each, then selecting the value <= 0 entries, but that gets a little complicated, and is a lot of passes compared to just iterating the list and doing the subtraction and delete if, imo.
 
-Later I saw how to get my select logic for the subset down to a clean(ish) single line (`select{ |k, v| (v - rhs[k]) > 0}.empty?`). I got there faster by just getting a working implementation first and working down from there, which is what I should have done in the screen.
-
-
 ```ruby
 #tests for the subtraction that the subset relies on
 hash = { foo: 5, bar: 3}.extend(Scrabble::FreqHash)
@@ -54,8 +51,6 @@ module Scrabble
       end
       newh
     end
-
-
   end
 
   class Dictionary < Hash
@@ -75,3 +70,6 @@ module Scrabble
   end
 end
 ```
+
+Later I saw how to get my select logic for the subset down to a clean(ish) single line. But I got there faster by just getting a working implementation first and working down from there, which is what I should have done in the screen. I put the final shorter solution in this posts open graph preview tile, I'm sure that will cause no confusion. 😇:
+{{header_image()}}
