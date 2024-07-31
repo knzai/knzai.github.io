@@ -2,79 +2,67 @@
 # If you don't have a JSON Resume you can just edit this YAML file instead.
 # See also: <https://jsonresume.org/>.
 basics:
-  name: "Richard Hendricks"
-  label: "Programmer"
-  picture: "https://via.placeholder.com/240x240"
+  name: "Kenzi Connor"
+  label: "Engineering Leader"
+  picture: "/assets/img/me-240x240.jpg"
   email: ""
-  phone: "(912) 555-4321"
-  website: "https://piedpiper.com"
+  phone: "+1 (415) 309-2256"
+  website: "https://knz.ai"
   summary: >
-    Richard hails from Tulsa.
-    He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!)
-    Before starting Pied Piper, he worked for Hooli as a part time software developer.
-    While his work focuses on applied information theory,
-    mostly optimizing lossless compression schema of both the length-limited and adaptive variants,
-    his non-work interests range widely,
-    everything from quantum computing to chaos theory.
-    He could tell you about it, but THAT would NOT be a “length-limited” conversation!
-    Open `_data/resume.yml` to edit this text.
+    
   location:
-    address: "2712 Broadway St"
-    postalCode: "CA 94115"
-    city: "San Francisco"
+    address: ""
+    postalCode: "CA 94602"
+    city: "Oakland"
     countryCode: "US"
     region: "California"
   profiles:
-    - network: "Twitter"
-      username: "RHendricksCEO"
-      url: ""
     - network: "LinkedIn"
-      username: "Richard Hendricks"
-      url: ""
+      username: "knzai"
+      url: "https://www.linkedin.com/in/knzai/"
 work:
-  - company: "Pied Piper"
-    position: "CEO/President"
-    website: "https://piedpiper.com"
-    startDate: "2013-12-01"
+  - company: "Cloud City Development"
+    position: "CEO & CTO"
+    website: "https://cloudcity.io"
+    startDate: "2010-10-01"
     endDate: ""
-    summary: >
-      Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has
-      consistently fielded high Weisman Scores™ that are not merely competitive,
-      but approach the theoretical limit of lossless compression.
     highlights:
-      - "Built an algorithm for artist to detect if their music was violating copy right infringement laws"
-      - "Successfully won Techcrunch Disrupt"
-      - "Optimized an algorithm that holds the current world record for Weisman Scores"
+      - "Founded and grew 35 person software design + development firm"
+      - "Principal Engineer and CTO consultant for clients"
+      - "Built teams that IPO’ed, got acquired and secured $100s of millions in funding"
+  - company: "OKCupid Labs (Match.com)"
+    position: "CTO & Advisor"
+    startDate: "2011-09-01"
+    endDate: "2013-02-01"
+    highlights:
+      - "Built team from 0 to mid-30 headcount within 7 months of initial engagement"
+      - "Weekly strategy sessions for dozens of properties, with tens of millions of users"
+      - "Managed full redesign and re-architecture of the largest of these properties"
+      - "Established an effective engineering team that could continue to deliver after I left"
+  - company: "Pivotal Labs"
+    position: "Senior Software Engineer"
+    startDate: "2010-10-01"
+    endDate: "2011-04-01"
+    highlights:
+      - "Emergency jill-of-all-trades across both complex frontend and high-scale backend"
+      - "Ramped up quickly on 4 projects in 7 months, contributing effectively immediately"
+      - "Built developer infrastructure for high-scale, no-downtime migration from VPS to AWS"
+      - "Debugged mass-scale throughput/IO concurrency limitations"
 volunteer:
   - organization: "CoderDojo"
     position: "Teacher"
     website: "https://coderdojo.com/"
-    startDate: "2012-01-01"
-    endDate: "2013-01-01"
     summary: "Global movement of free coding clubs for young people."
     highlights:
       - "Awarded 'Teacher of the Month'"
 education:
-  - institution: "University of Oklahoma"
-    area: "Information Technology"
-    studyType: "Bachelor"
-    startDate: "2011-06-01"
-    endDate: "2014-01-01"
-    gpa: "4.0"
+  - institution: "University of Utah"
+    area: "Computer Science"
+    studyType: "Bachelor, Honors - incomplete"
+    startDate: "1996-08-01"
+    endDate: "2000-05-01"
     courses:
-      - "DB1101 - Basic SQL"
-      - "CS2011 - Java Introduction"
-awards:
-  - title: "Digital Compression Pioneer Award"
-    date: "2014-11-01"
-    awarder: "Techcrunch"
-    summary: "There is no spoon."
-publications:
-  - name: "Video compression for 3d media"
-    publisher: "Hooli"
-    releaseDate: "2014-10-01"
-    website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
-    summary: "Innovative middle-out compression algorithm that changes the way we store data."
+      - "Minors: Math, Physics, Chemistry"
 skills:
   - name: "Web Development"
     level: "Master"
@@ -97,7 +85,9 @@ interests:
       - "Ferrets"
       - "Unicorns"
 references:
-  - name: "Erlich Bachman"
+  - name: "Afeisha James-Kipps"
     reference: >
-      It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
-      Company proved that he will be a valuable addition to any company.
+      A sharp technological and business acumen, coupled with a resounding passion for startup entrepreneurs realizing their full potential, Kenzi is nothing short of an amazing CTO advisor.
+  - name: "Rand Fitzpatrick"
+    reference: >
+      Kenzi is an excellent technical leader, providing well thought out solutions, careful team guidance, and quick and valuable results. She also handles the challenges of startup life with humor and wit, which is a boon to all working with her.

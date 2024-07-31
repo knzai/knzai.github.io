@@ -53,7 +53,7 @@ menu:
     url:               /posts/
   - title:             Projects
     url:               /projects/
-  - title:             Résumé*
+  - title:             Résumé
     url:               /resume/
 
 # Add links to the footer.
