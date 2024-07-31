@@ -1,5 +1,4 @@
 ---
-layout: project
 title: zolaction
 caption: Zola build/deploy via a GH Action
 description: >
@@ -14,11 +13,6 @@ links:
     url: https://github.com/zolacti/on
   - title: gh marketplace
     url: https://github.com/marketplace/actions/zola-action
-    
-accent_color: '#4fb1ba'
-accent_image:
-  background: '#193747'
-theme_color: '#193747'
 ---
 
 - Language/Platform: Github Actions (bash and yml)

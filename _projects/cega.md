@@ -1,5 +1,4 @@
 ---
-layout: project
 title: cega
 caption: Rust CGA parsing w/png output & wasm front-end
 description: >
@@ -17,10 +16,6 @@ links:
     url: https://crates.io/crates/cega
   - title: docs.rs
     url: https://docs.rs/cega/latest/cega/
-accent_color: '#4fb1ba'
-accent_image:
-  background: '#193747'
-theme_color: '#193747'
 ---
 
 

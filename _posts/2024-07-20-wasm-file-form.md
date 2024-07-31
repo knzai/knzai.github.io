@@ -2,14 +2,8 @@
 layout: post
 title: "Handling FormData and file inputs in Rust Wasm"
 image: /assets/img/posts/wasm-file-form.png
-accent_image: 
-  background: url('/assets/img/posts/jj-ying.jpg') center/cover
-  overlay: false
-accent_color: '#ccc'
-theme_color: '#ccc'
 description: >
   Pull requests and example usage of yew, gloo, and web-sys
-invert_sidebar: true
 categories: ["rust", "wasm"]
 ---
 

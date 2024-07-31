@@ -2,14 +2,8 @@
 layout: post
 title: "Using Ruby's #.extend on instances to avoid modifying a base class"
 image: /assets/img/posts/ruby-frequency-hash.png
-accent_image: 
-  background: url('/assets/img/posts/jj-ying.jpg') center/cover
-  overlay: false
-accent_color: '#ccc'
-theme_color: '#ccc'
 description: >
   Making a Scrabble word-finder by adding subtraction and overloading the subset operator on #.tally supplied frequency hashes
-invert_sidebar: true
 category: ruby
 ---
 

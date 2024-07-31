@@ -2,15 +2,11 @@
 layout: post
 title: Cleaning Up Web Published Google Docs
 image: /assets/img/posts/cleaning-gdocs.png
-accent_image: 
-  background: url('/assets/img/posts/jj-ying.jpg') center/cover
-  overlay: false
-accent_color: '#ccc'
-theme_color: '#ccc'
 description: >
   Parsing content with Rust regexes in Zola
-invert_sidebar: true
 category: rust
+redirect_from:
+  - /posts/cleaning-gdocs/
 ---
 
 # Cleaning Up Web Published Google Docs

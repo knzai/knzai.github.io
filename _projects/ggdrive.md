@@ -1,5 +1,4 @@
 ---
-layout: project
 title: ggdrive.sh
 caption: Bash script to export Google Docs as pdfs
 description: >
@@ -12,10 +11,6 @@ links:
     url: https://knz.ai/projects/ggdrive
   - title: gist
     url: https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9
-accent_color: '#4fb1ba'
-accent_image:
-  background: '#193747'
-theme_color: '#193747'
 ---
 
 - Language/Platform: Bash/shell

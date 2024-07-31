@@ -5,14 +5,13 @@ description: >
 hide_description: true
 left_column:
   - work
-  - volunteer
-  - awards
+  - education
   - references
 right_column:
-  - languages
   - skills
+  - volunteer
+  - languages
   - interests
-  - education
 no_language_icons: false
 no_skill_icons: false
 buttons:

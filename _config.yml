@@ -111,13 +111,14 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   - scope:
-      path:            hyde/
+      path: "_posts"
     values:
-      accent_color:    rgb(38,139,210)
-      theme_color:     rgb(32,32,32)
-      accent_image:
-        background:    rgb(32,32,32)
-        overlay:       false
+      accent_color: '#4fb1ba'
+      accent_image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNc4+j0HwAFAAIwbJslAwAAAABJRU5ErkJggg==)
+      theme_color: '#ac4142'
+
+
+
 
   # Don't include documents in assets in the sitemap
   - scope:
@@ -143,8 +144,12 @@ defaults:
   - scope:
       type:            projects
     values:
+      layout: project
       seo:
         type:          WebPage
+      accent_color: '#4fb1ba'
+      accent_image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAAKCAYAAAAnx3TwAAAAU0lEQVR42u3XQQEAQAQAsBPjkoigfyJi8NhaLH5WPwAAAGBVCDoAAAAIOgAAACDoAAAAIOgAAACAoAMAAICgAwAAAIIOAAAAgg4AAAAIOgAAANwzVAQP507pM4wAAAAASUVORK5CYII=)
+      theme_color: '#193747'
   - scope:
       type:            featured_categories
     values:

@@ -2,14 +2,8 @@
 layout: post
 title: "Using Ruby enum_for to implement multiple paths enumerating the same Enumerable"
 image: /assets/img/posts/ruby-enum-for.png
-accent_image: 
-  background: url('/assets/img/posts/jj-ying.jpg') center/cover
-  overlay: false
-accent_color: '#ccc'
-theme_color: '#ccc'
 description: >
   Idiomatic breadth-first versus depth-first tree-traversals in Ruby
-invert_sidebar: true
 category: ruby
 ---
 

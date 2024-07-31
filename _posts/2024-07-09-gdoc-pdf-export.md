@@ -1,14 +1,8 @@
 ---
 layout: post
 title: Exporting a Google Doc into a PDF in a Github Action
-accent_image: 
-  background: url('/assets/img/posts/jj-ying.jpg') center/cover
-  overlay: false
-accent_color: '#ccc'
-theme_color: '#ccc'
 description: >
   Basically just a wget call
-invert_sidebar: true
 ---
 ETA: this, of course, I then rolled into a [bash script with way too nice of usage()\* for a few-liner](/projects/ggdrive.md).  [\*bash convention for the help function]
 
