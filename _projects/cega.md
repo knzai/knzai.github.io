@@ -1,7 +1,7 @@
 ---
 layout: project
 title: cega
-caption: CGA/EGA parsing w/png output & wasm front-end
+caption: Rust CGA parsing w/png output & wasm front-end
 description: >
   CGA/EGA* parsing with png/etc output, colored terminal preview, pre-alpha of wasm front-end in Rust.
   *graphics formats from 1980s games

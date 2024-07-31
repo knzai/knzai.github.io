@@ -62,14 +62,14 @@ legal:
 
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2024. All rights reserved.
+copyright:             © 2024. No rights reserved.
 
 # Format of the permalinks
 permalink:             /posts/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /blog/:num/
+paginate_path:         /posts/:num/
 
 
 # Theme

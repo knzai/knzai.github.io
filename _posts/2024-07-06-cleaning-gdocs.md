@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Cleaning Up Web Published Google Docs
-image: /assets/img/blog/cleaning-gdocs.png
+image: /assets/img/posts/cleaning-gdocs.png
 accent_image: 
-  background: url('/assets/img/blog/jj-ying.jpg') center/cover
+  background: url('/assets/img/posts/jj-ying.jpg') center/cover
   overlay: false
 accent_color: '#ccc'
 theme_color: '#ccc'
@@ -53,5 +53,3 @@ regex_replace(pattern=`\s`, rep=` `) |
 safe }}
 {% endraw %}
 ```
-
-*[SERP]: Search Engine Results Page
