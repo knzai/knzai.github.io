@@ -22,4 +22,5 @@ buttons:
   # The later requires `hydejack.no_structured_data: false` and only works once the site is deployed to a public URL.
   vcf: http://h2vx.com/vcf/<!--url-->
   json: /assets/resume.json
+accent_image: /assets/img/skiing.jpg
 ---
