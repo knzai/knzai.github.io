@@ -28,7 +28,7 @@ assert_equal breadth, @tree.each(:breadth).map(&:value)
 
 I've given the LinkedList version of a tech screen enough times (before I decided the flaws in this whole approach outweigh the gains, but that's a longer topic for another post), so I could probably implement it in my sleep. Since I've been working on learning Rust, I practiced some list implementations in that. This was excellent didactic experience (I learned so much more about `Option` and why I really do like Rust), but it definitely highlighted that I don't have the 20 years experience in Rust that I do in Ruby.
 
-Whipping out a LinkedList to reminded myself that yes, I still know Ruby very well (it descended into golfing, and then this slightly silly implementation of `#shift` that I'd never do outside a gag: `l,s = reverse_each.first(2); l.h.tap { l.h = s&.t = nil })`. I figured I should do tree traversals as well, since breadth-first did trip me up in an interview once (I choked and couldn't recall "just put it in a stack", which I have since tattoed into my brain).
+Whipping out a LinkedList to reminded myself that yes, I still know Ruby very well (it descended into golfing, and then this slightly silly implementation of `#unshift` that I'd never do outside a gag: `l,s = reverse_each.first(2); l.h.tap { l.h = s&.t = nil })`. I figured I should do tree traversals as well, since breadth-first did trip me up in an interview once (I choked and couldn't recall "just put it in a stack", which I have since tattoed into my brain).
 
 The interesting part is right here:
 ```ruby
