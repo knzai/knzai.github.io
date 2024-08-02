@@ -5,7 +5,7 @@ layout: page
 
 ![me](/assets/img/me-256x256.jpg){: width="200" class="about" }
 
-I grew up in the back of small planes, as my beloved, single, working, immigrant mom ran a glider business to support us, and often my "baby sitter" was just me being strapped into the backseat of the tow-plane, often to promptly fall alseep. She's recently passed, so my sidebar image is a photo of her performing a "wing-over" over ski hill in my home town.
+I grew up in the back of small planes, as my beloved, single, working, immigrant mom ran a glider business to support us, and often my "baby sitter" was just me being strapped into the backseat of the tow-plane, often to promptly fall alseep. She's recently passed, so my sidebar image is a photo of her performing a "wing-over" over the ski hill in my home town.
 
 Thus, I was inculcated with a certain fearlessness from an early age, and was a competitive mogul skiier for 13 years, with ambitions of the Olympics. Most of my excitement nowadays comes from riding motorycles (my current beauty being a Triumph 1700 Thunderbird LT) and the never-ending thrill of making tests turn green (or the Rust compiler build clean). I am actually not joking; it is one of life's most dependable dopamine hits (if perhaps not quite the same epinephrine spike).
 
