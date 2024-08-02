@@ -5,7 +5,7 @@ image: /assets/img/posts/ruby-enum-for.png
 description: >
   Idiomatic breadth-first versus depth-first tree-traversals in Ruby
 redirect_from:
-  - /posts/ruby-enum-for
+  - /posts/ruby-enum-for/
 category: ruby
 ---
 
