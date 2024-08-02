@@ -1,3 +1,4 @@
+.env
 public
 *.sh
-.env
+_site

@@ -1,0 +1,194 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Kenzi Connor"
+  label: "Engineering Leader"
+  picture: "/assets/img/me-240x240.jpg"
+  email: "resume@knz.ai"
+  phone: "+1 (415) 309-2256"
+  website: "https://knz.ai"
+  summary: |
+    - High-compliance spaces: fin/edu/health/gov tech
+    - High-throughput, low-latency, low-downtime systems
+    - Management of cross-functional teams and cross-team collabs
+    - Resilience in high-pressure situations: rush jobs & very high-profile clients
+    - Responsible for client relationships and all aspects of businesses
+  location:
+    address: ""
+    postalCode: "CA 94602"
+    city: "Oakland"
+    countryCode: "US"
+    region: "California"
+  profiles:
+    - network: "LinkedIn"
+      username: "knzai"
+      url: "https://www.linkedin.com/in/knzai/"
+work:
+  - company: "Cloud City Development"
+    position: "CEO & CTO"
+    website: "https://cloudcity.io"
+    startDate: "2010-10-01"
+    endDate: ""
+    highlights:
+      - "Founded and grew 35 person software design + development firm"
+      - "Principal Engineer and CTO consultant for clients"
+      - "Built teams that IPO’ed, got acquired and secured $100s of millions in funding"
+  - company: "PivotBio"
+    position: "Staff Engineer & Engineering Manager - Consultant"
+    website: "https://www.pivotbio.com/"
+    startDate: "2019/08/20"
+    endDate: "2023/08/02"
+    highlights:
+      - "Maintained and improved their existing core Rails + Python LIMS"
+      - "Managed the team who took over LIMS maintenance as well as their geospatial viewer"
+  - company: "OKCupid Labs (Match.com)"
+    position: "CTO & Advisor"
+    startDate: "2011-09-01"
+    endDate: "2013-02-01"
+    highlights:
+      - "Built team from 0 to mid-30 headcount within 7 months of initial engagement"
+      - "Weekly strategy sessions for dozens of properties, with tens of millions of users"
+      - "Managed full redesign and re-architecture of the largest of these properties"
+      - "Established an effective engineering team that could continue to deliver after I left"
+  - company: "Pivotal Labs"
+    position: "Senior Software Engineer"
+    website: "https://en.wikipedia.org/wiki/Pivotal_Labs"
+    startDate: "2010-10-01"
+    endDate: "2011-04-01"
+    highlights:
+      - "Ramped up quickly on 4 projects in 7 months, contributing effectively immediately"
+      - "Built developer infrastructure for high-scale, no-downtime migration from VPS to AWS"
+      - "Debugged mass-scale throughput/IO concurrency limitations"
+  - company: "Senior Software Engineer"
+    position: "Yieldbuild"
+    startDate: "2007-10-01"
+    endDate: "2010-09-01"
+    highlights:
+      - "Co-authored nginx & Rack handlers w/ billions of monthly uniques"
+      - "Built primary reporting/data site with dynamic data-viz in Flex"
+      - "Framework and infrastructure updates with a zero-downtime requirement"
+      - "Optimized payloads of .js within individual IP packet size constraints"
+  - company: "CEO & CTO"
+    position: "InfoSauce"
+    startDate: "2003-02-03"
+    endDate: "2007-09-30"
+    highlights:
+      - "Co-founded and grew 10 person software design + development firm"
+      - "Principal Engineer and CTO consultant for clients"
+      - "Continued to develop high-profile (NDA) banking clients"
+  - company: "Lead Developer"
+    position: "BridgeLine Software"
+    startDate: "2002-01-01"
+    endDate: "2003-02-03"
+    highlights:
+      - "Head dev for Wall Street/financial work with global roll-outs"
+  - company: "Hall Kinion"
+    position: "Developer"
+    startDate: "2001-01-01"
+    endDate: "2002-12-31"
+    highlights:
+      - "Rebuilt mortgage services app from Access DB to ASP"
+  - company: "University of Utah"
+    position: "Technology Production Assistant"
+    startDate: ""
+    endDate: ""
+    highlights:
+      - "Built technology-assisted curriculum (video, multimedia, online) for professors"
+
+volunteer:
+  - organization: "SF Pride"
+    position: "Board Member"
+    website: "https://sfpride.org/"
+  - organization: "Railsbridge"
+    position: "Mentor"
+    website: "https://blog.railsbridge.org/"
+  - organization: "Rails Girls"
+    position: "Mentor"
+    website: "https://railsgirls.com/"
+  - organization: "Dev Bootcamp"
+    position: "Mentor"
+    website: "https://en.wikipedia.org/wiki/Dev_Bootcamp"
+    
+education:
+  - institution: "University of Utah"
+    area: "Computer Science"
+    studyType: "Bachelor, Honors - incomplete"
+    startDate: "1996-08-01"
+    endDate: "2000-05-01"
+    courses:
+      - "Minors: Math, Physics, Chemistry"
+skills:
+  - name: "Backend Development"
+    keywords:
+      - "Ruby on Rails"
+      - "Rust"
+      - "Node.js"
+      - "Python"
+      - "GraphQL"
+      - "REST"
+      - ".NET"
+      - "Java"
+      - "C/C++"
+  - name: "Frontend Development"
+    keywords:
+      - "HTML"
+      - "CSS"
+      - "Javascript"
+      - "wasm/Web Assembly"
+      - "Data-viz"
+      - "Charting"
+      - "Progressive enchancement"
+      - "Responsive/mobile-first"
+      - "GraphQL"
+      - "Flash/Flex"
+  - name: "Data"
+    keywords:
+      - "SQL"
+      - "PostgreSQL"
+      - "MySQL"
+      - "MSSQL"
+      - "Nosql"
+      - "HDFS/HBase"
+      - "CouchDB"
+      - "Redis"
+      - "Cassandra"
+      - "0mq/Rabbitmq"
+  - name: "Infra/Ops/Scale"
+    keywords:
+      - "CI+CD"
+      - "A+B Testing"
+      - "Github Actions"
+      - "Bash/shell"
+      - "chef"
+      - "DevOps"
+      - "Varnish"
+      - "nginx"
+      - "HAProxy"
+      - "DNS"
+      - "git"
+  - name: "Bioinformatics"
+    keywords:
+      - "LIMS"
+languages:
+  - language: "English"
+    fluency: "Native speaker"
+interests:
+  - name: "Current"
+    keywords:
+      - "Motorcyles"
+      - "Hiking"
+  - name: "Former"
+    keywords:
+      - "#36 US Ranked Mogul Skiier"
+      - "Circus Arts"
+      - "Kung Fu & FMA"
+      - "Surfing"
+      - "Long-boarding (skateboard)"
+references:
+  - name: "Afeisha James-Kipps"
+    reference: >
+      A sharp technological and business acumen, coupled with a resounding passion for startup entrepreneurs realizing their full potential, Kenzi is nothing short of an amazing CTO advisor.
+  - name: "Rand Fitzpatrick"
+    reference: >
+      Kenzi is an excellent technical leader, providing well thought out solutions, careful team guidance, and quick and valuable results. She also handles the challenges of startup life with humor and wit, which is a boon to all working with her.
