@@ -1,0 +1,30 @@
+.dl-table {
+  a {
+    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
+      text-underline-offset: .8rem;
+    }
+    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
+      padding-bottom: .45rem;
+    }
+  }
+
+  .btn, .gumroad-button  {
+    margin: 1rem 0;
+  }
+}
+
+img.about {
+  width: 200px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.sidebar-sticky > * {
+  backdrop-filter: blur(3px);
+  backdrop-filter: brightness(30%);
+  border-radius: 10px;
+}
+.sidebar-bg {
+  background-size: auto 100%
+}
