@@ -4,6 +4,8 @@ title: "Using Ruby enum_for to implement multiple paths enumerating the same Enu
 image: /assets/img/posts/ruby-enum-for.png
 description: >
   Idiomatic breadth-first versus depth-first tree-traversals in Ruby
+redirect_from:
+  - /posts/ruby-enum-for
 category: ruby
 ---
 

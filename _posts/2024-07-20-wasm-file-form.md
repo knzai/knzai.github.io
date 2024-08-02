@@ -4,6 +4,8 @@ title: "Handling FormData and file inputs in Rust Wasm"
 image: /assets/img/posts/wasm-file-form.png
 description: >
   Pull requests and example usage of yew, gloo, and web-sys
+redirect_from:
+  - /posts/wasm-file-form
 categories: ["rust", "wasm"]
 ---
 

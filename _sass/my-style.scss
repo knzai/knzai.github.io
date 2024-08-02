@@ -13,12 +13,18 @@
   }
 }
 
-// .lead.aspect-ratio.sixteen-nine { 
-//   border: 1px solid var(--border-color);
-//   transition: border-color 500ms ease;
-// }
+img.about {
+  width: 200px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
 .sidebar-sticky > * {
-  backdrop-filter: blur(2px);
-  backdrop-filter: brightness(60%);
+  backdrop-filter: blur(3px);
+  backdrop-filter: brightness(30%);
   border-radius: 10px;
+}
+.sidebar-bg {
+  background-size: auto 100%
 }

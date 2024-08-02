@@ -16,6 +16,8 @@ links:
     url: https://crates.io/crates/cega
   - title: docs.rs
     url: https://docs.rs/cega/latest/cega/
+redirect_from:
+  - /cega
 ---
 
 

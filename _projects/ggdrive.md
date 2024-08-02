@@ -11,6 +11,8 @@ links:
     url: https://knz.ai/projects/ggdrive
   - title: gist
     url: https://gist.github.com/knzai/75702a336a25646e6c0039f96d5732b9
+redirect_from:
+  - /ggdrive
 ---
 
 - Language/Platform: Bash/shell

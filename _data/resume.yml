@@ -8,8 +8,12 @@ basics:
   email: "resume@knz.ai"
   phone: "+1 (415) 309-2256"
   website: "https://knz.ai"
-  summary: >
-    
+  summary: |
+    - High-compliance spaces: fin/edu/health/gov tech
+    - High-throughput, low-latency, low-downtime systems
+    - Management of cross-functional teams and cross-team collabs
+    - Resilience in high-pressure situations: rush jobs & very high-profile clients
+    - Responsible for client relationships and all aspects of businesses
   location:
     address: ""
     postalCode: "CA 94602"
@@ -31,7 +35,7 @@ work:
       - "Principal Engineer and CTO consultant for clients"
       - "Built teams that IPO’ed, got acquired and secured $100s of millions in funding"
   - company: "PivotBio"
-    position: "Staff Rails Engineer & Engineering Manager - Consultant"
+    position: "Staff Engineer & Engineering Manager - Consultant"
     website: "https://www.pivotbio.com/"
     startDate: "2019/08/20"
     endDate: "2023/08/02"
@@ -53,7 +57,6 @@ work:
     startDate: "2010-10-01"
     endDate: "2011-04-01"
     highlights:
-      - "Emergency jill-of-all-trades across both complex frontend and high-scale backend"
       - "Ramped up quickly on 4 projects in 7 months, contributing effectively immediately"
       - "Built developer infrastructure for high-scale, no-downtime migration from VPS to AWS"
       - "Debugged mass-scale throughput/IO concurrency limitations"
@@ -117,7 +120,6 @@ education:
       - "Minors: Math, Physics, Chemistry"
 skills:
   - name: "Backend Development"
-    level: "Master"
     keywords:
       - "Ruby on Rails"
       - "Rust"
@@ -129,7 +131,6 @@ skills:
       - "Java"
       - "C/C++"
   - name: "Frontend Development"
-    level: "Master"
     keywords:
       - "HTML"
       - "CSS"
@@ -142,7 +143,6 @@ skills:
       - "GraphQL"
       - "Flash/Flex"
   - name: "Data"
-    level: "Master"
     keywords:
       - "SQL"
       - "PostgreSQL"
@@ -155,7 +155,6 @@ skills:
       - "Cassandra"
       - "0mq/Rabbitmq"
   - name: "Infra/Ops/Scale"
-    level: "Master"
     keywords:
       - "CI+CD"
       - "A+B Testing"
@@ -169,7 +168,6 @@ skills:
       - "DNS"
       - "git"
   - name: "Bioinformatics"
-    level: "Expert"
     keywords:
       - "LIMS"
 languages:
@@ -186,7 +184,7 @@ interests:
       - "Circus Arts"
       - "Kung Fu & FMA"
       - "Surfing"
-      - "Longboarding (skateboard)"
+      - "Long-boarding (skateboard)"
 references:
   - name: "Afeisha James-Kipps"
     reference: >

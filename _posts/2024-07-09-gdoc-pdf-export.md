@@ -3,6 +3,8 @@ layout: post
 title: Exporting a Google Doc into a PDF in a Github Action
 description: >
   Basically just a wget call
+redirect_from:
+  - /posts/gdoc-pdf-export/
 ---
 ETA: this, of course, I then rolled into a [bash script with way too nice of usage()\* for a few-liner](/projects/ggdrive.md).  [\*bash convention for the help function]
 

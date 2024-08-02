@@ -49,6 +49,8 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             About
+    url:               /about/
   - title:             Posts
     url:               /posts/
   - title:             Projects
@@ -111,9 +113,9 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   - scope:
-      path: "_posts"
+      path: "posts"
     values:
-      accent_color: '#4fb1ba'
+      accent_color: '#ac4142'
       accent_image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNc4+j0HwAFAAIwbJslAwAAAABJRU5ErkJggg==)
       theme_color: '#ac4142'
 

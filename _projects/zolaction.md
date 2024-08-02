@@ -13,6 +13,12 @@ links:
     url: https://github.com/zolacti/on
   - title: gh marketplace
     url: https://github.com/marketplace/actions/zola-action
+redirect_from:
+  - /zolaction
+  - /zolacli
+  - /zolabuild
+  - /projects/zolacli
+  - /projects/zolabuild
 ---
 
 - Language/Platform: Github Actions (bash and yml)
