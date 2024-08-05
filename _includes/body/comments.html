@@ -1,0 +1,6 @@
+{% if page.toot_id %}
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">{{ site.data.strings.comments | default:"Comments" }}</h2>
+  <mastodon-comments host="tech.lgbt" user="knzai" tootId="{{page.toot_id}}"></mastodon-comments>
+</aside>
+{% endif %}

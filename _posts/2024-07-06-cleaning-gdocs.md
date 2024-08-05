@@ -7,6 +7,7 @@ description: >
 category: rust
 redirect_from:
   - /posts/cleaning-gdocs/
+toot_id: 112761044619578619
 ---
 
 # Cleaning Up Web Published Google Docs

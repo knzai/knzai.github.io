@@ -28,3 +28,17 @@ img.about {
 .sidebar-bg {
   background-size: auto 100%
 }
+
+mastodon-comments {
+  --font-color: #5d686f;
+  --font-size: 1.0rem;
+
+  --block-border-width: 1px;
+  --block-border-radius: 3px;
+  --block-border-color: #ededf0;
+  --block-background-color: none;
+
+  --comment-indent: 40px;
+
+  h2 { display: none }
+}

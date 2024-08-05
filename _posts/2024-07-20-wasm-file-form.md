@@ -7,6 +7,7 @@ description: >
 redirect_from:
   - /posts/wasm-file-form/
 categories: ["rust", "wasm"]
+toot_id: 112820421486365524
 ---
 
 I submitted some [pull requests for additional examples](https://github.com/knzai/yew/pulls) to the top level library I'm using for Rust Wasm, [yew](https://yew.rs/). Some of the underlying tech and libraries have advanced since most of the examples were created, and there wasn't a simple one for a very common use case: using a form with multiple fields, including a file-input selector.
