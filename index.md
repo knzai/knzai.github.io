@@ -1,11 +1,11 @@
 ---
-title: About me
 layout: welcome
 sitemap: true
 no_breadcrumbs: true
 strip_headers: true
 related_posts: false
 ---
+<h2><a href="/about">About</a></h2>
 <article>
 	{% assign page = site.pages | where: "path", "about.md" | first %}
 	{% assign text = site.data.strings.continue_reading | default:"Continue reading <!--post_title-->" %}
