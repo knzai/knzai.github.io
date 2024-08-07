@@ -53,3 +53,5 @@ And here's how simple it is to actually call it. You can just pass the `FileRead
 </body>
 </html>
 ```
+
+Oh, and all this can be done so simply partly thanks to [Trunk](https://trunkrs.dev/), which is one of the best parts of the rust-wasm tech stack I started with.
