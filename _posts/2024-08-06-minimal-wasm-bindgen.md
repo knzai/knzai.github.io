@@ -15,8 +15,8 @@ For context, here is the (elided) function I'm going to call.
 ```rust
 #[wasm_bindgen]
 pub fn png(data: &[u8]) -> String {
-	let mut bytes: Vec<u8> = Vec::new();
-	...stuff
+    let mut bytes: Vec<u8> = Vec::new();
+    ...stuff
     format!("data:application/png;base64,{}", STANDARD.encode(bytes))
 }
 ```
