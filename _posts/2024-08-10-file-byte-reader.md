@@ -4,7 +4,7 @@ title: "Minimal WebComponent to parse file selectors into bytearrays"
 image: /assets/img/projects/file-byte-reader.png
 description: >
   Extending the HTMLInputElement and using custom events for easy hooks
-toot_id: 112919231724048267
+toot_id: 112938841131588752
 ---
 
 I'm in the process of moving the (non-wasm parts) of my web front-end for [cega](/projects/cega) over to vanilla Jasvacript WebComponents. I've liked how much it cleans up and encapsulates the logic without even needing a framework. The hooks for parsing the file into a byte array on the client-side (for passing to the wasm) were an obvious extraction point, so I pulled it out to a gist micro-project: [file-byte-reader](/projects/file-byte-reader).
