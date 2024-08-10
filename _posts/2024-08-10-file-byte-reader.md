@@ -11,6 +11,8 @@ I'm in the process of moving the (non-wasm parts) of my web front-end for [cega]
 
 This hides a [lower-level abstraction with its own async, FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader). It also makes a nice real world example of extending an input tag and using custom events to give easy hooks for your WebComponents.  I liked the [pattern Chris Ferdinandi was using for having a (partially) curried emit function to make dispatching your events more succinct](https://gomakethings.com/custom-events-in-web-components/), so I've added it to my practices for WebComponents going forward.
 
+ETA: The code in this post may not get updates, so check the gist on the [project page](/projects/file-byte-reader) for the latest.
+
 ```javascript
 //attach a listener (to an `is` applied file selector) that will get the parsed byte array:
 //<input is="file-byte-reader" id="file-input" type="file"
