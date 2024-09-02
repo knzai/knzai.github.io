@@ -85,7 +85,7 @@ theme: jekyll-theme-hydejack
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-#accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/sidebar-bg.avif
 accent_color:          rgb(79,177,186)
 #invert_sidebar: true
 
@@ -410,21 +410,21 @@ jekyll_compose:
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar-bg.avif
     posts:
       layout: post
       description: > 
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar-bg.avif
     projects:
       layout: project
       description: > 
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar-bg.avif
       links:
         - title: Project Link
           url: https://example.com

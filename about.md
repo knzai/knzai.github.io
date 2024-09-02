@@ -1,6 +1,7 @@
 ---
 title: About
 layout: page
+accent_image: /assets/img/skiing.avif
 ---
 
 ![me](/assets/img/me-256x256.jpg){: width="200" class="about" }
