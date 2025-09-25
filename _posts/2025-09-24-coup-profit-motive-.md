@@ -3,6 +3,8 @@ layout: post
 title: "A possible profit motive in the RubyGems coup"
 description: >
   I propose a possible profit motive for Shopify's supposed involvement in the RubyGems coup.
+
+toot_id: 115262034240709689
 ---
 
 I've been wondering at the possibility of a profit motive for Shopify in the [latest rubygems coup](https://bsky.app/profile/joel.drapper.me/post/3lzj7bi4ohk2s]).
